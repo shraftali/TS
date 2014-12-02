@@ -1,0 +1,31 @@
+/**
+ * Description: base.css include all other css named as per there modules.
+ * Version: 1.0.0
+ * Last update: 2104/11/18
+ * Author: User Name <ntyagi@tradestonesoftware.com>
+ *
+ * Summary:
+ *
+ *    0. imports
+ *    1. ELEMENT
+ *        - 1.1. TYPE ELEMENT
+ *        - 1.2. TYPE ELEMENT
+ */
+/* ==========================================================================
+   0. @imports
+   ========================================================================== */
+   @import url(http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css);/*--- Normalize elements ---*/
+   @import url(fonts.css);/*--- custom font css ---*/
+   /*@import url(header-nav.css);*//*-- Header Nav including side and top Nav --*/
+   #page-content { padding:20px; } 
+   
+/* ==========================================================================
+   0. Sticky Global Header
+   ========================================================================== */
+	
+/* ==========================================================================
+/* 0.1. TYPE ELEMENT
+   ========================================================================== */
+
+/* 0.2. TYPE ELEMENT
+   ========================================================================== */

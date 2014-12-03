@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TradeStone - My Views</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/base.css">
+        <link href="http://cdn.kendostatic.com/2014.2.1008/styles/kendo.common.min.css" rel="stylesheet">
+        <link href="http://cdn.kendostatic.com/2014.2.1008/styles/kendo.silver.min.css" rel="stylesheet">
+    </head>
+<body>
+  <div id="page-content">
+  <h1>Add & Delete Row</h1>
+    <div id="grid"></div>
+  </div>
+</div>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2014.2.1008/js/kendo.all.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/data/myView.js"></script>
+    
+    <script>
+                $(function(){
+ 
+              var rows =  [
+               
+                {
+                    itemName: "VP-LINKEDSTYLE-P", 
+                    productCategory: "WOVEN BOTTOM", 
+                    CategoryElement1: "CARGO", 
+                    Price: "23.67", 
+                    BusinessType: "AR KIDS", 
+                    Season: "SLN-FLOWER", 
+                    MerchandiseGroup: "AR", 
+                    GroupBusiness: "AR GROUP BUSINESS", 
+                    Family: "AR FAMILY", 
+                    DeptGroup: " ", 
+                    Brand: "ZR-BRAND CODE", 
+                    Discontinued: "true"
+                },
+                {
+                    itemName: "VP-LINKEDSTYLE-P", 
+                    productCategory: "WOVEN BOTTOM", 
+                    CategoryElement1: "CARGO", 
+                    Price: "23.67", 
+                    BusinessType: "AR KIDS", 
+                    Season: "SLN-FLOWER", 
+                    MerchandiseGroup: "AR", 
+                    GroupBusiness: "AR GROUP BUSINESS", 
+                    Family: "AR FAMILY", 
+                    DeptGroup: " ", 
+                    Brand: "ZR-BRAND CODE", 
+                    Discontinued: "true"
+                },
+                {
+                    itemName: "VP-LINKEDSTYLE-P", 
+                    productCategory: "WOVEN BOTTOM", 
+                    CategoryElement1: "CARGO", 
+                    Price: "23.67", 
+                    BusinessType: "AR KIDS", 
+                    Season: "SLN-FLOWER", 
+                    MerchandiseGroup: "AR", 
+                    GroupBusiness: "AR GROUP BUSINESS", 
+                    Family: "AR FAMILY", 
+                    DeptGroup: " ", 
+                    Brand: "ZR-BRAND CODE", 
+                    Discontinued: "true"
+                },
+                {
+                    itemName: "VP-LINKEDSTYLE-P", 
+                    productCategory: "WOVEN BOTTOM", 
+                    CategoryElement1: "CARGO", 
+                    Price: "23.67", 
+                    BusinessType: "AR KIDS", 
+                    Season: "SLN-FLOWER", 
+                    MerchandiseGroup: "AR", 
+                    GroupBusiness: "AR GROUP BUSINESS", 
+                    Family: "AR FAMILY", 
+                    DeptGroup: " ", 
+                    Brand: "ZR-BRAND CODE", 
+                    Discontinued: "true"
+                },
+                {
+                    itemName: "VP-LINKEDSTYLE-P", 
+                    productCategory: "WOVEN BOTTOM", 
+                    CategoryElement1: "CARGO", 
+                    Price: "23.67", 
+                    BusinessType: "AR KIDS", 
+                    Season: "SLN-FLOWER", 
+                    MerchandiseGroup: "AR", 
+                    GroupBusiness: "AR GROUP BUSINESS", 
+                    Family: "AR FAMILY", 
+                    DeptGroup: " ", 
+                    Brand: "ZR-BRAND CODE", 
+                    Discontinued: "true"
+                },
+                {
+                    itemName: "VP-LINKEDSTYLE-P", 
+                    productCategory: "WOVEN BOTTOM", 
+                    CategoryElement1: "CARGO", 
+                    Price: "23.67", 
+                    BusinessType: "AR KIDS", 
+                    Season: "SLN-FLOWER", 
+                    MerchandiseGroup: "AR", 
+                    GroupBusiness: "AR GROUP BUSINESS", 
+                    Family: "AR FAMILY", 
+                    DeptGroup: " ", 
+                    Brand: "ZR-BRAND CODE", 
+                    Discontinued: "true"
+                },
+                {
+                    itemName: "VP-LINKEDSTYLE-P", 
+                    productCategory: "WOVEN BOTTOM", 
+                    CategoryElement1: "CARGO", 
+                    Price: "23.67", 
+                    BusinessType: "AR KIDS", 
+                    Season: "SLN-FLOWER", 
+                    MerchandiseGroup: "AR", 
+                    GroupBusiness: "AR GROUP BUSINESS", 
+                    Family: "AR FAMILY", 
+                    DeptGroup: " ", 
+                    Brand: "ZR-BRAND CODE", 
+                    Discontinued: "true"
+                },
+                {
+                    itemName: "VP-LINKEDSTYLE-P", 
+                    productCategory: "WOVEN BOTTOM", 
+                    CategoryElement1: "CARGO", 
+                    Price: "23.67", 
+                    BusinessType: "AR KIDS", 
+                    Season: "SLN-FLOWER", 
+                    MerchandiseGroup: "AR", 
+                    GroupBusiness: "AR GROUP BUSINESS", 
+                    Family: "AR FAMILY", 
+                    DeptGroup: " ", 
+                    Brand: "ZR-BRAND CODE", 
+                    Discontinued: "true"
+                },
+                {
+                    itemName: "VP-LINKEDSTYLE-P", 
+                    productCategory: "WOVEN BOTTOM", 
+                    CategoryElement1: "CARGO", 
+                    Price: "23.67", 
+                    BusinessType: "AR KIDS", 
+                    Season: "SLN-FLOWER", 
+                    MerchandiseGroup: "AR", 
+                    GroupBusiness: "AR GROUP BUSINESS", 
+                    Family: "AR FAMILY", 
+                    DeptGroup: " ", 
+                    Brand: "ZR-BRAND CODE", 
+                    Discontinued: "true"
+                }
+                ];
+
+                var myDataSource =
+                    new kendo.data.DataSource({
+                        data: rows,
+                        pageSize: 5,
+                        schema: {
+                            model: {
+                                id: "ProductID",
+                                fields: {
+                                    itemName: {editable: true, nullable: false },
+                                    productCategory: { validation: { required: true, min: 1} },
+                                    Discontinued: { type: "boolean" },
+                                    Price: { type: "number", validation: { min: .99, required: true } }
+                                }
+                            }
+                        }           
+                    });
+
+                myDataSource.read();
+                $("#grid").kendoGrid({
+                    dataSource: myDataSource,
+                    columns: [
+                            {field:"itemName", title:"Item Name"},
+                            {field:"productCategory", title:"Product Category"},
+                            {field:"CategoryElement1", title:"Category Element1"},
+                            {field:"Price", title:"Price", format: "{0:c}", width: "120px"},
+                            {field:"BusinessType", title:"Business Type"},
+                            {field:"Season", title:"Season"},
+                            {field:"MerchandiseGroup", title:"Merchandise Group"},
+                            {field:"GroupBusiness", title:"Group Business"},
+                            {field:"Family", title:"Family"},
+                            {field:"DeptGroup", title:"Dept Group"},
+                            {field:"Brand", title:"Brand"},
+                            {field:"Discontinued", title:"Discontinued"},
+                            { command: ["edit", "destroy"], title: "&nbsp;", width: "250px" }
+                        ],
+                    scrollable: false,
+                    pageable: true,
+                    sortable: true,
+                    toolbar: ["create", "save", "cancel"],
+                    navigatable: true,
+                    editable: "popup",
+                    batch: true,
+                });
+              
+            });
+            </script>
+</body>
+</html>

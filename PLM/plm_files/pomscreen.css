@@ -1,0 +1,108 @@
+/*************************************/
+/*  Copyright  (C)  2002 - 2003      */
+/*           by                      */
+/*  TradeStone Software, Inc.    */
+/*  Gloucester, MA. 01930            */
+/*  All Rights Reserved              */
+/*  Printed in U.S.A.                */
+/*  Confidential, Unpublished        */
+/*  Property of                      */
+/*  TradeStone Software, Inc.    */
+/*************************************/
+
+.dtht,.clspomsectionheader, .clspomsectionheader TR, .clspomsectionheader TD,#tablet
+{
+	font-size: 9pt;
+	color: black;	
+	height: 22px;
+	background: url('../images/sectionheader.gif') top repeat-x;	
+}
+
+/* have to override TR and TD so that the POM header sections behave similar to the PLM screens */
+.clspomsectionheader, .clspomsectionheader TR, .clspomsectionheader TD
+{
+	padding-left: 10px;
+	border-top: #b1c3d1 0px solid;
+	border-left: #a8bace 0px solid;
+	border-right: #b1c3d1 0px solid;
+	border-bottom: #839bb3 0px solid;
+}
+.dtht,#tablet
+{
+	border-top: #b1c3d1 1px solid;
+	border-left: #a8bace 1px solid;
+	border-right: #b1c3d1 1px solid;
+	border-bottom: #839bb3 1px solid;
+}
+
+#tablet
+{
+	padding: 0px 0px 0px 10px;
+}
+
+#FLTR_OPEN TD,#FLTR_CLOSE TD
+{
+    background-color:#FFF;
+}
+tr
+{
+    font-family: 'Trebuchet MS', Verdana;
+}
+td
+{
+    font-family: 'Trebuchet MS', Verdana;
+    font-size: 8pt;
+    color: #000;
+}
+
+td.dtlt,td.dsh, td.dtltvmiddle
+{
+	background: #fff;
+	color:#000;
+	border-bottom: 1px solid #000;
+}
+
+td.dsh, td.dtltvmiddle
+{
+	font-size: 9pt;
+	font-weight:bold;
+	vertical-align:middle;
+	font-family: 'trebuchet ms', verdana;
+	border-bottom: 1px solid #000;
+}
+
+td.dtlt
+{
+	font-size: 9pt;
+	font-weight:bold;
+	vertical-align:middle;
+	border-left:1px solid #fff;
+	font-family: 'trebuchet ms', verdana;
+}
+
+
+.clsAnchorDefault
+{
+    text-decoration:none;
+}
+
+/* The style attributes defined is the same set of attributes as INPUT.clsTextNormal*/
+INPUT
+{
+    border: #bdd3ff 1px solid;
+	color: #000;	
+	font-family:verdana;
+}
+
+/* The style attributes defined is the same set of attributes as SELECT.clsSelectNormal */
+SELECT
+{
+    border: #bdd3ff 1px solid;
+	color: #000;
+	height:16px;
+}
+/* right table td properties for the detail section*/
+TABLE.pom_dtl_rt td
+{
+    border-bottom:1px solid #D6D6D6;
+}

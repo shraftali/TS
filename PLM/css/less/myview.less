@@ -1,0 +1,99 @@
+#grid-wrap{
+	padding: 20px;
+	width: 1024px;
+	.k-grid-header{
+		th.disabledColumn{
+			background: #f66;
+		}
+	} 
+	.disabledColumn {
+		.k-header-column-menu{
+			display:none;
+		}
+	}
+}
+
+
+/* hide column menu arrow */
+
+
+.k-window-title{
+	font-family: 'Trebuchet MS', Verdana;
+}
+
+
+
+
+
+
+// Scrollable container to show scolldata
+.scrl-box{
+	overflow: auto;
+	border: 1px solid #ccc;
+	-webkit-backface-visibility: hidden;
+	margin: 0;
+	padding: 10px!important;
+	&.small{
+		height: 100px;
+		width: 50%; 
+	}
+}
+
+//Some Base form Css
+form{
+	&.my-view-form{
+		font-family: 'Trebuchet MS', Verdana;
+		font-size: 1em;
+		.info-msg{
+			padding: 0;
+			margin: 0;
+			font-size: .7em;
+		}
+		h4{
+			margin:0;
+			padding: 10px 0 0;
+			font-size: .8em;
+		}
+		.err-wrap{
+			display: none;
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 10px 0 0 0;
+			padding: 0;
+			li{
+				margin-bottom: 10px;
+			}
+		}
+	}
+	&.lbl-block{
+		label{
+			display: block;
+			margin-bottom: .5em;
+			font-size: .8em;
+		}
+		.k-textbox{
+			margin-bottom: 10px;
+			font-size: .7em;
+		}
+	}
+	span{
+		&.k-tooltip {
+			margin-left: 6px;
+			font-size: .7em;
+		}
+	}
+	.label-inline{
+		.k-radio-label{
+			padding-left: 20px;
+			line-height: 1.4em;
+		}
+	}
+	.btn-wrap {
+		text-align: right;
+		button{
+			margin-right: 20px;
+		}
+	}
+}

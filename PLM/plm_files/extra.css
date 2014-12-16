@@ -18,23 +18,24 @@
 	padding: 0;
 }
 
-.my-view-form li {
-	margin-top: 10px;
-}
-
-.my-view-form label {
-	display: block;
-	padding-right: 3px;
-}
 
 .my-view-form span.k-tooltip {
 	margin-left: 6px;
 }
 
 
-.my-view-form .button-wrap {
+.my-view-form .btn-wrap {
 	text-align: right;
 }
-.my-view-form .button-wrap button{
+.my-view-form .btn-wrap button{
 	margin-right: 20px;
+}
+.scrl-box{
+	overflow: auto;
+	border: 1px solid #ccc;
+	padding: 10px!important;
+}
+.scrl-box.small{
+	height: 100px;
+	width: 50%;
 }

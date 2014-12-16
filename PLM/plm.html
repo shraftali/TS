@@ -3,9 +3,8 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
+  <title>TradeStone Dashboard</title>
   <link rel="stylesheet" type="text/css" media="screen" href="./plm_files/htmlcomponents.css">
-
   <!-- // Added for the dashboard components  -->
   <link rel="stylesheet" type="text/css" media="screen" href="./plm_files/pomscreen.css">
   <link rel="stylesheet" type="text/css" media="screen" href="./plm_files/jquery-ui-1.8.4.custom.css">
@@ -13,15 +12,14 @@
   <link rel="stylesheet" type="text/css" media="screen" href="./plm_files/ui.jqgrid.css">
   <link rel="stylesheet" type="text/css" media="screen" href="./plm_files/fullcalendar.css">
   <link rel="stylesheet" type="text/css" media="screen" href="./plm_files/main.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="./plm_files/extra.css">
-  <link rel="stylesheet" href="http://cdn.kendostatic.com/2014.3.1119/styles/kendo.common.min.css" />
-    <link rel="stylesheet" href="http://cdn.kendostatic.com/2014.3.1119/styles/kendo.default.min.css" />
-    <link rel="stylesheet" href="http://cdn.kendostatic.com/2014.3.1119/styles/kendo.dataviz.min.css" />
-    <link rel="stylesheet" href="http://cdn.kendostatic.com/2014.3.1119/styles/kendo.dataviz.default.min.css" />
-    <script src="http://cdn.kendostatic.com/2014.3.1119/js/jquery.min.js"></script>
-    <script src="http://cdn.kendostatic.com/2014.3.1119/js/kendo.all.min.js"></script>
-  <script src="./plm_files/grid.js"></script>
-  <title>TradeStone Dashboard</title>
+  <!-- Common Kendo UI CSS -->
+  <link href="css/base.css" rel="stylesheet" />
+  <!-- jQuery JavaScript -->
+  <script src="scripts/lib/jquery/jquery.min.js"></script>
+  <!-- Kendo UI combined JavaScript -->
+  <script src="scripts/lib/kendo/kendo.all.min.js"></script>
+  <!-- myView Related js  -->
+  <script src="scripts/tradestone/grid.js"></script>
 </head>
 
 
@@ -331,7 +329,7 @@ var partyTypeQualifier='';
                     <td>
                       <div style="padding-left: 5px; overflow-y: auto; overflow-x: hidden; display: block; visibility: visible; height: 423px;" id="nav30_navigatorCenterCol_tabcontainer" class="clsNavigatorViewTabContainer" name="nav0_navigatorCenterCol_tabcontainer">
                         <div id="searchSection0" style="padding-top:5px;">
-                          <a href="http://tsqa03.tradestonesoftware.com:9083/core/plm.do#" onclick="preRestoreArea(0)" class="navSubTitle">DESIGN CENTER DASHBOARD</a>
+                          <a href="http://tsqa03.tradestonesoftware.com:9083/core/plm.do#" class="navSubTitle">DESIGN CENTER DASHBOARD</a>
                         </div>
                         <hr style="width:152px;color:#7F94A7">
                         <div style="padding-left:5px;" id="nav0dataleft">
@@ -339,7 +337,7 @@ var partyTypeQualifier='';
                             <tbody>
                               <tr valign="center">
                                 <td class="clsDashAnchor" id="00000nav" style="cursor:pointer;">
-                                  <a class="clsDashAnchor" title="Dashboard" onclick="pnaAfterSaveConfirm(&#39;cdiv&#39;,&#39;00000nav&#39;, 0,&#39;left&#39;,&#39;plm.do?method=refreshplmdash&amp;tabClicked=dcenter&#39;)">
+                                  <a class="clsDashAnchor" title="Dashboard" >
                                     <div class="newbg" id="00000a" style="background-position: 0px -326px; width: 6px; height: 9px; display: inline-block;" border="0">
                                     </div> Dashboard</a>
                                   </td>
@@ -2302,11 +2300,11 @@ function resetTop()
       <tr>  
        <td align="left">
         <label class="clsTextLabelNormal" style="cursor: pointer; text-decoration: underline;" onclick="javascript:newfsubmitForQueryViewer(&#39;exporttoexcel(xlsxformat)&#39;)">Export to Excel(XLSX Format)</label>|
-        <label class="clsTextLabelNormal" style="cursor: pointer; text-decoration: underline;" id="saveState" >Save Table Layout</label>|
+        <label class="clsTextLabelNormal" style="cursor: pointer; text-decoration: underline;" id="saveState" >Save My View</label>|
         <select name="chooseLayout" id="chooseLayout">
           <option value="">Select View</option>
           <option value="myView1">My View1</option>
-          <option value="delete">Delete</option>
+          <option value="delete">Delete a View</option>
         </select>
       </td>     
       <td align="right">
@@ -2651,15 +2649,16 @@ function resetTop()
 
 <!-- Start SaveMyView Dialog -->
 <div id="dialogSaveLayout" style="display:none;">
-  <form id="myViewForm" class="my-view-form" data-role="validator" novalidate="novalidate">
+  <form id="myViewForm" class="my-view-form lbl-block" data-role="validator" novalidate="novalidate">
+    <div class="err-wrap"></div><!-- Should be used for server side error message -->
       <ul>
           <li>
-              <label for="queryName">Source Query Name:</label>
-              <input type="text" class="k-textbox k-state-disabled" name="queryName" id="queryName" value="Query Name" disabled="disabled" />
+              <label for="srcQueryName">Source Query Name:</label>
+              <input type="text" class="k-textbox k-state-disabled" name="srcQueryName" id="srcQueryName" value="Query Name" disabled="disabled" />
           </li>
           <li>
-              <label for="saveLayout">Save Query with My View as:</label>
-              <input type="text" class="k-textbox" name="saveLayout" id="saveLayout" placeholder="My View of Name of Query" required="required" validationMessage="Layout Name is Required" />
+              <label for="saveQuery">Save Query with My View as:</label>
+              <input type="text" class="k-textbox" name="saveQuery" id="saveQuery" placeholder="Name of Query" required="required" validationMessage="Name of Query is Required" />
           </li>
           <li class="label-inline">
             <input type="radio" name="saveTo" id="saveToDashQue" class="k-radio" checked="checked">
@@ -2667,11 +2666,11 @@ function resetTop()
           </li>
           <li class="label-inline">
             <input type="radio" name="saveTo" id="saveToDash" class="k-radio" checked="checked">
-            <label class="k-radio-label" for="saveToDash">Make Layout available on Query page only</label>
+            <label class="k-radio-label" for="saveToDash">Make View available on Query page only</label>
           </li>
-        <li  class="button-wrap">
-            <button class="k-button k-primary" type="submit">Submit</button>
-            <button class="k-button k-primary cancel" type="button">Cancel</button>
+        <li  class="btn-wrap">
+            <button class="k-button k-primary" type="submit">Save</button>
+            <button class="k-button k-primary cancel" type="reset">Cancel</button>
         </li>
       </ul>
   </form>
@@ -2680,33 +2679,63 @@ function resetTop()
 <!-- Start Delete MyView Dialog -->
 <div id="deleteMyView" style="display:none;">
   <form id="deletemyViewForm" class="my-view-form" data-role="validator" novalidate="novalidate">
+  <p class="info-msg">
+    You cannnot delete the original view provided for the query, or the query itself.
+  </p>
   <h4>Select View to delete:</h4>
-      <ul>
-      <li>
-          <input type="checkbox" id="myViewOriginal" class="k-checkbox" disabled="disabled">
-          <label class="k-checkbox-label" for="myViewOriginal">Original</label>
-      </li>
-      <li>
-        <input type="checkbox" id="My View1" class="k-checkbox" >
-        <label class="k-checkbox-label" for="My View1">My View 1</label>
-      </li>
-      <li class="label-inline">
-          <input type="checkbox" id="myView2" class="k-checkbox">
-          <label class="k-checkbox-label" for="myView2">My View 2</label>
-      </li>
-      <li class="label-inline">
-          <input type="checkbox" id="myView3" class="k-checkbox">
-          <label class="k-checkbox-label" for="myView3">My View 3</label>
-      </li>
-      <li id="errors" class="error"></li>
-       
-        <li>You cannot delete the original view crated with the query.</li>
-        <li>You cannot delete the original query.</li>
-        <li  class="button-wrap">
-            <button class="k-button k-primary" type="submit">Submit</button>
-            <button class="k-button k-primary cancel" type="button">Cancel</button>
-        </li>
-      </ul>
+  <div class="err-wrap"></div><!-- Should be used for server side error message -->
+      <div >
+        <ul class="scrl-box small">
+          <li>
+              <input type="checkbox" id="myViewOriginal" class="k-checkbox" disabled="disabled">
+              <label class="k-checkbox-label" for="myViewOriginal">Original</label>
+          </li>
+          <li>
+            <input type="checkbox" id="My View1" class="k-checkbox" >
+            <label class="k-checkbox-label" for="My View1">My View 1</label>
+          </li>
+          <li class="label-inline">
+              <input type="checkbox" id="myView2" class="k-checkbox">
+              <label class="k-checkbox-label" for="myView2">My View 2</label>
+          </li>
+          <li class="label-inline">
+              <input type="checkbox" id="myView3" class="k-checkbox">
+              <label class="k-checkbox-label" for="myView3">My View 3</label>
+          </li>
+          <li class="label-inline">
+              <input type="checkbox" id="myView4" class="k-checkbox">
+              <label class="k-checkbox-label" for="myView4">My View 4</label>
+          </li>
+          <li class="label-inline">
+              <input type="checkbox" id="myView5" class="k-checkbox">
+              <label class="k-checkbox-label" for="myView5">My View 5</label>
+          </li>
+          <li class="label-inline">
+              <input type="checkbox" id="myView6" class="k-checkbox">
+              <label class="k-checkbox-label" for="myView6">My View 6</label>
+          </li>
+          <li class="label-inline">
+              <input type="checkbox" id="myView7" class="k-checkbox">
+              <label class="k-checkbox-label" for="myView7">My View 7</label>
+          </li>
+          <li class="label-inline">
+              <input type="checkbox" id="myView8" class="k-checkbox">
+              <label class="k-checkbox-label" for="myView8">My View 8</label>
+          </li>
+          <li class="label-inline">
+              <input type="checkbox" id="myView9" class="k-checkbox">
+              <label class="k-checkbox-label" for="myView9">My View 9</label>
+          </li>
+          <li class="label-inline">
+              <input type="checkbox" id="myView10" class="k-checkbox">
+              <label class="k-checkbox-label" for="myView10">My View 10</label>
+          </li>
+        </ul>
+      </div>
+      <div  class="btn-wrap">
+          <button class="k-button k-primary" type="submit">Delete</button>
+          <button class="k-button k-primary cancel" type="reset">Cancel</button>
+      </div>
   </form>
 </div><!-- End Delete MyView Dialog -->
 

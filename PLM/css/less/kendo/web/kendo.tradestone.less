@@ -12,7 +12,7 @@
 @fallback-texture: url('textures/highlight.png');
 
 /* Widget Base Styles */
-@widget-text-color: #515967;
+@widget-text-color: #363636;
 @inverse-text-color: #fff;
 @widget-gradient: "rgba(255, 255, 255, 0.45098) 0px, rgba(255, 255, 255, 0) 100%";
 @widget-background-color: #fff;
@@ -33,11 +33,13 @@
 @link-text-color: @widget-text-color;
 
 /* Headers */
-@header-text-color: @widget-text-color;
+// @header-text-color: @widget-text-color;
+@header-text-color: #316b9d;
 @header-background-color: #f3f3f4;
 
 /* Buttons */
-@button-text-color: @widget-text-color;
+@button-text-color: #363636;
+// @button-background-color: @header-background-color;
 @button-background-color: @header-background-color;
 
 /* Group Base Styles */
@@ -51,16 +53,20 @@
 /* Widget States */
 
 /* Hover State */
-@hover-text-color: #263248;
-@hover-gradient: "rgba(255,255,255,.3) 0%, rgba(255,255,255,0) 100%";
-@hover-background-color: #b6bdca;
+// @hover-text-color: #263248;
+@hover-text-color: #316b9d;
+// @hover-gradient: "rgba(255,255,255,.3) 0%, rgba(255,255,255,0) 100%";
+@hover-gradient: none;
+// @hover-background-color: #b6bdca;
+@hover-background-color: #d5e8f8;
 @hover-border-color: @hover-background-color;
 @hover-shadow: none;
 
 /* Selected State */
 @selected-text-color: #fff;
-@selected-gradient: "rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%";
-@selected-background-color: #1984c8;
+// @selected-gradient: "rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%";
+@selected-gradient: none;
+@selected-background-color: #909091;
 @selected-border-color: @selected-background-color;
 @selected-shadow: none;
 
@@ -71,10 +77,11 @@
 @focused-active-item-shadow: inset 0 0 15px 5px darken(@selected-border-color, 8%);
 
 /* Active State */
-@active-text-color: @widget-text-color;
+// @active-text-color: @widget-text-color;
+@active-text-color: #316b9d;
 @active-gradient:  none;
-@active-background-color: #fff;
-@active-border-color: #a6afbe;
+@active-background-color: #d5e8f8;
+@active-border-color: #d5e8f8;
 @active-shadow: none;
 
 /* Error State */
@@ -177,7 +184,7 @@
 @calendar-header-hover-background: @hover-background-color;
 @calendar-footer-active-background: @widget-background-color; 
 @calendar-group-background-color: @group-background-color; 
-@button-border-color: @widget-border-color;
+@button-border-color: #bbbbbb;
 @menu-border-color: @widget-border-color;
 @tabstrip-items-border: @widget-border-color;
 @tabstrip-active-background: @active-background-color;
@@ -186,7 +193,7 @@
 @drop-down-border-color: @widget-border-color;
 @drop-down-hover-border-color: @hover-border-color;
 @drop-down-focused-border-color: @focused-border-color;
-@drop-down-background: #f3f3f4;
+@drop-down-background: #e3e3e3;
 @drop-down-text-color: @widget-text-color;
 @secondary-border-color: @widget-border-color;
 @secondary-text-color: @widget-text-color;
@@ -202,15 +209,17 @@
 @disabled-gradient: @widget-gradient;
 
 @primary-button-text-color: #fff;
-@primary-button-background-color: #1984c8;
-@primary-button-border-color: #1a84c8;
-@primary-gradient: "#469cd3 0%, #1b85c8 100%";
+@primary-button-background-color: #316b9d;
+@primary-button-border-color: #316b9d;
+// @primary-gradient: "#469cd3 0%, #1b85c8 100%";
+@primary-gradient: none;
 @primary-shadow:none;
 
 @primary-hover-text-color: @primary-button-text-color;
-@primary-hover-background-color: #004eb6;
+@primary-hover-background-color: #2d4773;
 @primary-hover-border-color: @primary-button-border-color;
-@primary-hover-gradient: "#1b85c8 0%, #469cd3 100%";
+// @primary-hover-gradient: "#1b85c8 0%, #469cd3 100%";
+@primary-hover-gradient: none;
 @primary-hover-shadow:none;
 
 @primary-focused-color: #263248; 
@@ -229,10 +238,15 @@
 @primary-disabled-border-color: #6dadd6;
 @primary-disabled-gradient: "#88bbdd 0%, #6eadd6 100%";
 
-@button-hover-text-color: @hover-text-color;
-@button-hover-background-color: @hover-background-color;
-@button-hover-border-color: @hover-border-color;
+// @button-hover-text-color: @hover-text-color;
+@button-hover-text-color: #363636;
+// @button-hover-background-color: @hover-background-color;
+@button-hover-background-color: #d0d3d8;
+// @button-hover-border-color: @hover-border-color;;
+@button-hover-border-color: #bbbbbb;
 
+
+@button-active-background: @selected-background-color;
 @button-active-background: @selected-background-color;
 @button-active-border-color: @selected-border-color;
 @button-focused-border-color: @button-border-color;

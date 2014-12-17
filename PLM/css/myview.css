@@ -1,0 +1,76 @@
+#grid-wrap {
+  padding: 20px;
+  width: 1024px;
+}
+#grid-wrap .k-grid-header th.disabledColumn {
+  /*background: #f66;*/
+}
+#grid-wrap .disabledColumn .k-header-column-menu {
+  display: none;
+}
+/* hide column menu arrow */
+.k-window-title {
+  font-family: 'Trebuchet MS', Verdana;
+}
+.scrl-box {
+  overflow: auto;
+  border: 1px solid #ccc;
+  -webkit-backface-visibility: hidden;
+  margin: 0;
+  padding: 10px!important;
+}
+.scrl-box.small {
+  height: 100px;
+  width: 50%;
+}
+form.my-view-form {
+  font-family: 'Trebuchet MS', Verdana;
+  font-size: 1em;
+}
+form.my-view-form .info-msg {
+  padding: 0;
+  margin: 0;
+  font-size: .7em;
+}
+form.my-view-form h4 {
+  margin: 0;
+  padding: 10px 0 0;
+  font-size: .8em;
+}
+form.my-view-form .err-wrap {
+  display: none;
+  color: red;
+  font-size: .7em;
+  margin-top: 10px;
+}
+form.my-view-form ul {
+  list-style-type: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+form.my-view-form ul li {
+  margin-bottom: 10px;
+}
+form.lbl-block label {
+  display: block;
+  margin-bottom: .5em;
+  font-size: .8em;
+}
+form.lbl-block .k-textbox {
+  margin-bottom: 10px;
+  font-size: .7em;
+}
+form span.k-tooltip {
+  margin-left: 6px;
+  font-size: .7em;
+}
+form .label-inline .k-radio-label {
+  padding-left: 20px;
+  line-height: 1.4em;
+}
+form .btn-wrap {
+  text-align: right;
+}
+form .btn-wrap button {
+  margin-right: 20px;
+}

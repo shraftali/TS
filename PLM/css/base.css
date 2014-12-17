@@ -10429,7 +10429,7 @@ html .km-pane-wrapper .km-widget,
   width: 1024px;
 }
 #grid-wrap .k-grid-header th.disabledColumn {
-  background: #f66;
+  /*background: #f66;*/
 }
 #grid-wrap .disabledColumn .k-header-column-menu {
   display: none;
@@ -10465,6 +10465,9 @@ form.my-view-form h4 {
 }
 form.my-view-form .err-wrap {
   display: none;
+  color: red;
+  font-size: .7em;
+  margin-top: 10px;
 }
 form.my-view-form ul {
   list-style-type: none;

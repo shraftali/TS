@@ -108,7 +108,6 @@ $(document).ready( function() {
     myViewForm.submit(function(event) {
         event.preventDefault();
         if (validateSaveMyView.validate()) {
-            alert("your Table Layout has been Saved");
         //Make call here to the function that will save the layout to the Backend
         /*var state = {
         columns: grid.columns,
@@ -127,14 +126,14 @@ $(document).ready( function() {
         });*/
 
         //Temp options saving it in local data
-        localStorage["kendo-grid-options"] = kendo.stringify(grid.getOptions());
+        localStorage["kendo-grid-options"] = kendo.stringify(gridData.getOptions());
+        alert("Your My View has been Saved");
         dialog.close();
     }
     });            
 
     $(".cancel", myViewForm).click(function(event) {
         validateSaveMyView.hideMessages();
-        console.log('in save dialog');
         dialog.close();
     });
 
@@ -180,9 +179,9 @@ $(document).ready( function() {
     });*/
     //Local temp Solution
     var options = localStorage["kendo-grid-options"];
-    if (options) {
-        grid.setOptions(JSON.parse(options));
-    }
+        if (options) {
+            gridData.setOptions(JSON.parse(options));
+        }
     }
     return false;   
     });
@@ -190,10 +189,11 @@ $(document).ready( function() {
     // Validation for DeleteMyView Dialog Form
     $('#deleteMyView').submit(function(e){
         if($('#deleteMyView').find(':checked').length<1){
-            e.preventDefault()
-            $(".err-wrap").html('Check atleast one checkbox to delete your save View');
-        }
+            $(".err-wrap").html('Check atleast one checkbox to delete your save View').css('display', 'block');
+            return false;
+          }
         if(!confirm('Deleting this view will also make it unavailable from the Dashboard OK/Cancel')){
+            $(".err-wrap").html('').css('display', 'none');
             return false;
         };
     })
@@ -201,6 +201,5 @@ $(document).ready( function() {
         dialogDeleteView.close();
         $('#chooseLayout').val(0);
     });
-
 
 });

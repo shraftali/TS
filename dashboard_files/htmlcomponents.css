@@ -1,0 +1,2579 @@
+@import url(global.css);
+
+/*************************************/
+/*  Copyright  (C)  2002 - 2014      */
+/*           by                      */
+/*  TradeStone Software, Inc.        */
+/*  Gloucester, MA. 01930            */
+/*  All Rights Reserved              */
+/*  Printed in U.S.A.                */
+/*  Confidential, Unpublished        */
+/*  Property of                      */
+/*  TradeStone Software, Inc.        */
+/*************************************/
+
+/*
+Padding, Border
+1.	top 
+2.	right 
+3.	bottom 
+4.	left 
+
+background: color position size repeat origin clip attachment image
+
+font="italic small-caps bold 12px arial,sans-serif"
+Instead of Cursor: hand, use Cursor: pointer
+http://jigsaw.w3.org/css-validator/
+
+********************************
+Tracker# 20524  css optimization
+********************************
+*/
+
+/*****************************************************************************
+Global setting
+*****************************************************************************/
+/* Tracker#:20524 - PLM - CSS  OPTIMIZATION */
+input,select,table,tr,td,a,label
+{
+	font-family: 'Trebuchet MS', Verdana;
+	font-size: 8pt;        
+}
+
+td > b
+{
+	padding-left:2px;
+}
+
+img[src*="valsearch"]
+{
+	vertical-align:middle;
+}
+
+img[src*="tip"]
+{
+	vertical-align:middle;
+}
+
+img[src*="calen"]
+{
+	vertical-align:middle;
+}
+
+::-ms-clear
+{
+	display: none;
+}
+
+/*****************************************************************************
+Iframe setting
+*****************************************************************************/
+iframe
+{
+	display: block;
+}
+
+/*****************************************************************************
+ Scrollbar Style (experimental)
+******************************************************************************
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #85A8C4; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}*/
+
+/*****************************************************************************
+ Style class by HTML Tags & Generic classes
+*****************************************************************************/
+A
+{ 
+    color:#00F;
+    text-decoration:none;
+}
+
+.newbg
+{
+	background: url(../images/sprites.png);
+}
+
+/*Used as style class to text */
+.clsTextNormal
+{
+    border: #bdd3ff 1px solid;
+    font-family:Verdana;
+    vertical-align:middle;
+    margin:4px 0 4px 4px;
+}
+/*Used as style class to represent label text */
+.clsTextLabelNormal
+{
+    /*vertical-align:middle;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 4px;
+}
+.clsLabelEllipse
+{
+	white-space: nowrap;	
+	text-overflow: ellipsis; 
+	overflow: hidden;
+	vertical-align:middle;
+	display:block;
+}
+
+/* screen title style */
+.clstitleText
+{
+	font-weight: bold;
+	color: #999;
+}
+/*Used as style class to represent bold text*/
+.clsbold
+{  
+  font-weight: bold;
+}
+
+/*Used as style for banner*/
+.clsBannerLogoBottomLine
+{
+	background: url(data:image/gif;base64,R0lGODlhAQAtAIAAANri6////yH5BAAAAAAALAAAAAABAC0AAAIGjI+pywwFADs=) bottom repeat-x;
+	height: 45px;
+}
+/*Used as style for banner*/
+.clsBanner
+{
+	background: #fff url(../images/sprites.png) top left no-repeat;
+	background-position: -26px 0px;
+	height: 45px;
+	padding: 0px 0px 0px 8px;	
+	width:915px;
+}
+/*Used as style for banner*/
+.clsBannerAfter
+{
+	background: url(data:image/gif;base64,R0lGODlhAwAuANUAAJ+6zae/0cDS4MHT4Zu4y6O9z7LH2bnN3KfB0qbA0q3D1a3C1azD1aO8zqK8z5i0yaG7z5a0yKG8z6vD1avD1J+6zMHS4bHH2KvE1abB0py4ypy3y5u4zJe0ya3E1qe/0rnM3bLI2b/S4Zu3yqzE1S1jl7LH2Je0yMjY5bnM3K3E1ZSyxyhflAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAADAC4AAAZEQJZwSCwaj8ikcjksOUUCQWpqCpkUC8YnEGgUCgBAZTPSnDqPlXp9OkU4BIIE4kBkEhMKxqPqq0gmBhcgKQcDAxYoikEAOw==) repeat;
+}
+/*Used as style class for user greetings*/
+.clsUserGreetingText
+{
+	color: #666;
+	font-size:8pt;	
+}
+/*Used as style class for help text*/
+.clsHelpText
+{
+	color: #fff;
+}
+/*Used as style class for logout text*/
+.clsLogOutText
+{
+	color: #5986AA;
+}
+
+/*Used as style class used for trimmed text*/
+.clsTextTrim,.clsTextTrimMainDashboard
+{
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow:hidden;
+   width:55px;
+   font-size: 7pt;
+   color:#FFF;
+}
+/*Used as style class in Dashboard*/ 
+.clsTextTrimMainDashboard
+{
+   border-style: none;
+   width:130px;
+   font-size: 9pt;
+   color:#000;
+   display:inline-block;
+}
+ 
+/*Style vertical align text*/
+.clsTextLabelNormalVTop
+{
+	color:#000;
+    vertical-align:top;
+    text-align: center;
+    display:inline-block;
+}
+/*Used as style for pagination*/
+.clsPaginationHeader 
+{
+	font-size: 10pt;	
+}
+/*Used as style class for Read only TextArea*/
+.clsTextAreaReadOnly,.clsTextReadOnly,.clsSelectReadOnly
+{
+    border: #EEEEEE 1px solid;
+    background: #EEEEEE;
+}
+/*Used as style for Select drop down*/
+.clsSelectReadOnly
+{
+    height:16px;
+	width:125px;
+    margin-left:4px;
+}
+
+/*Used as style for readonly text box*/
+.clsTextReadOnly
+{
+    font-family:Verdana;
+    vertical-align:middle;
+    margin:4px 0 4px 4px;
+}
+/*Used as style class for select box*/
+ .clsSelectNormal
+{
+	border: #bdd3ff 1px solid;    
+    height:16px;
+	width:125px;
+    margin:4px 0 4px 4px;
+}
+/*Used as style class for Links with blue color and underline*/
+.clsTextLabelLink
+{
+    color: #00F;    
+    overflow: hidden;
+    white-space: nowrap;
+    text-decoration:underline;
+    cursor:pointer;
+}
+/*Used to add proper spacing to a link following a label*/
+label+br+a
+{
+	margin: 4px;
+}
+/*Used as style class in Input text as label in HTMLInputText*/
+.inputTextAsLabel
+{    
+    font-weight: bold;
+    vertical-align:middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border:0px;
+}
+/* Cursor style*/
+.cursorhand
+{
+	cursor:pointer;
+}
+/*Used as style class for the basic html elements*/
+input,select,textarea,button
+{
+	vertical-align:top;
+}
+textarea
+{
+	margin:4px 0 4px 4px;
+    white-space: pre-wrap;
+}
+/*Used as the style to set the TD element*/
+/*
+{
+	font-size:12px;
+}*/
+
+/*Merged from main.css*/
+#topt
+{
+	color:#FFF;
+	font:bold 17px Arial, Helvetica, sans-serif;
+	vertical-align:middle;
+}
+/*Merged from main.css*/
+#tablet, #dtlt
+{
+	background: #999;
+	color:#FFF;
+	font-weight:bold;
+}
+/*Merged from main.css*/
+#blk
+{
+	background:#FFF;
+}
+/*Merged from main.css*/
+#topg
+{
+	background:#009C5B;
+	height:20px;
+	font-size:15px;
+	color:#FFF;
+}
+/*Merged from main.css*/
+#alertitle
+{
+	background:#F00;
+	font-size:12px;
+	color:#FFF;
+	font-weight:bold;
+	text-align:center;
+}
+/*Merged from main.css*/
+#alertext
+{
+	background:#FFF;
+	font-size:13px;	
+}
+/*Merged from main.css*/
+a:hover,a.left:hover,a.work:hover,a.red:hover 
+{
+	text-decoration:underline;
+	/*color:#009C5B;*/
+	background-color:transparent
+}
+/*Merged from main.css*/
+a.red:hover   
+{
+	color:#F00;
+	
+}
+/*Merged from main.css*/
+#navShow
+{
+	background: url("../images/sprites.png") no-repeat scroll right top transparent;
+	background-position: -173px -101px;
+	position: absolute;
+	width: 16px;
+	height: 25px;
+	cursor: pointer;
+}
+/*Merged from main.css*/
+#navShow div
+{
+	background: url("../images/sprites.png") no-repeat scroll center 8px transparent;
+	background-position: -26px -182px;
+	width: 16px;
+	height: 25px;
+}
+/*Merged from main.css*/
+div.navTitle
+{
+	float: left;
+	font-size:9pt;
+	font-weight:bold;
+	color: inherit;
+}
+
+.navSubTitle
+{
+    color:#00468C;
+}
+
+/*Merged from main.css*/
+div.navHide
+{
+	margin-right: 5px;
+	background: url("../images/sprites.png") no-repeat scroll center 4px transparent;
+	background-position: -26px -202px;
+	width: 16px;
+	height: 18px;
+	float: right;
+}
+
+
+
+/*****************************************************************************
+ PLM Framework classes
+*****************************************************************************/
+/*Used as style for contents of sub section */
+.clssubsectiontblcontent 
+{
+	/*border-left: #d6d6d6 1px solid;
+	border-right: #d6d6d6 1px solid;*/
+	border-bottom: #d6d6d6 1px solid;
+	padding: 0px;
+}
+/*Used as style for contents of sub section header bar*/
+.clssubsectionheader 
+{	
+	font-size: 9pt;	
+	height: 22px;
+	background: url('../images/subsectionheader.gif') top repeat-x;
+    padding: 0px 0px 0px 10px;    
+}
+/*Used as style for Overview Section*/
+.clsoverviewsection 
+{
+	overflow-y:hidden;
+	overflow-x:hidden;
+}
+/*Used as style for Overview Section header*/
+.clsoverviewsectionheader 
+{
+	font-size: 9pt;
+	font-weight: bold;
+	border-bottom: #AFBFCE 1px solid;	
+	height: 25px;
+	vertical-align:bottom;
+}
+/*Used as style for layout header labels*/
+.clslabelheader 
+{
+	font-weight: bold;
+	font-size: 9pt;
+	
+}
+.brdrClRgtGr{
+	border-right: 1px solid #D6D6D6;	
+}
+.brdrClLftGr{
+	border-left: 1px solid #D6D6D6;	
+} 
+/*Used as style for the workarea section*/
+.clsWorkArea
+{
+    overflow:auto;
+    width:915px;
+}
+/*Used as style class for palette cell*/
+.colorPaletteCell
+{
+	vertical-align: top;
+	text-align: center;
+	color: #FFF;
+	width: 22px;
+	height: 22px;
+	cursor:move;
+}
+/*Used as style class for palette cell when highlighted*/
+.clspaletteHighlightCell
+{
+    vertical-align: top;
+	text-align: center;
+	width: 24px;
+	height: 20px;
+	cursor:move;
+	border-left:2px #FFF outset;
+    border-right:2px #FFF inset;
+    border-top:1px #FFF solid;
+    border-bottom: 1px #FFF solid;
+}
+/*Used as style class for palette label*/
+.colorPaletteLabel
+{
+	font-size: 13px;	
+	text-align: center;
+}
+/*Used as style class top tool bar section button left border cell*/
+.clsToolBarMenuButtonLBorder
+{
+	padding: 0px;	
+	height: 21px;
+	width: 2px;
+	background: url('../images/sprites.png') top;
+	background-position: -26px -279px;
+    vertical-align:top;
+}
+/*Used as style class top tool bar section button right border cell*/
+.clsToolBarMenuButtonRBorder
+{
+	padding: 0px;
+	height: 21px;
+	width: 1px;
+	background: url('../images/toolbarbuttonrightborder.gif') top;
+    vertical-align:top;
+}
+/*Used as style class top tool bar section button*/
+.clsToolBarMenuButton
+{
+	padding: 0px;
+	font-weight: bold;
+	height: 21px;
+	background: url('data:image/gif;base64,R0lGODlhAgAVAMQAAMvb5szb58fY5tHf6tDe6MfX5MjY5crb58XX48/e6c3b6N/o8NLf6t/p8NXi6tnl7tTg6sjY5tnk7dri69/o7+Ts8uXs88XW49jk7cTV48XW5MTW5AAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAACABUAAAUgYFUtzSM5UEIcQGFsl5ZpG70hMhwJgcIMGAyFYrFMJiEAOw==') top repeat-x;
+}
+/*Used as style class top tool bar section active button*/
+.clsToolBarMenuButtonActive
+{	
+	font-weight: bold;
+	color: white;
+	height: 21px;	
+	background: url('../images/toolbarmenubuttonactive.gif') top repeat;
+}
+/*Used as style class tool bar menu buttons*/
+.clsToolBarButtonRightPadding
+{
+	padding: 0px 10px 0px 0px;
+}
+/*Used as style class anchor tags*/
+.clsLabelAnchorNormal
+{
+    font-weight:bold;
+    font-size: 9pt;
+	color: #3537FA;
+	border-style: none;
+}
+/*Used as style class for color palette section*/
+.clscolorpaletteSection
+{
+	border: #d6d6d6 1px solid;
+	width:481px !important;
+	height:150px;
+	overflow: hidden;
+}
+/*Used as style class for color palette scrolling section in color overview screen*/
+.clsBarLeftButton
+{
+	background:url('../images/barrleftbutton.gif');
+	height:17px;
+	width:7px;
+}
+/*Used as style class for color palette scrolling section in color overview screen*/
+.clsBarRightButton
+{
+	background:url('../images/barrightbutton.gif');
+	height:17px;
+	width:7px;
+}
+/*Used as style class for Tech spec grid panel*/
+.clsBarLeftButtonPnl
+{
+	background:url('../images/popupbuttonleft.gif');
+	height:17px;
+	width:7px;
+}
+/*Used as style class for Tech spec grid panel*/
+.clsBarCenterPnlButton
+{
+	vertical-align:middle;
+	height:17px;
+	background:url('../images/popupbuttoncenter.gif') repeat-x;
+}
+/*Used as style class for Tech spec grid panel*/
+.clsBarRightButtonPnl
+{
+	background:url('../images/popupbuttonright.gif');
+	height:17px;
+	width:9px;
+}
+/*Used as style class for color palette table*/
+.clspaletteTable
+{
+	padding-right:10px;
+	padding-left:10px;
+	text-align:center;
+}
+/*Used as style class for color and material palette section*/
+.clscolorpalettematerialSection
+{
+	width:200px;
+	height:140px;
+	overflow: hidden;
+}
+/*Used as style class for color and material palette details section*/
+.clspalettedetails
+{
+	/* width:900px; */
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+/*Used as style class for custom section*/
+.clscustomsection 
+{	
+	overflow-y:hidden;
+	overflow-x:auto;	
+}
+/*Used as style class for Apply/Cancel button in grid panels*/
+ .clsApplyCancel
+ {
+ 	border: #BAB7B8 1px solid;
+    background:#CECBC5;
+ }
+/*Used as style class for bottm and right border for layouts*/
+ .clsBrdBtmRt
+ {
+    border-bottom:1px solid #D6D6D6;
+    border-right:1px solid #D6D6D6;
+ }
+/*Used as style class for bottm and right border for FitEval screen*/
+ .clsBrdBtmRt5pxPadding
+ {
+    border-bottom: #000000  1px solid;
+    border-right: #FFFFFF 2px solid;    
+    padding:5px 5px 0px 5px;    
+}
+/*Used as style class for bottm and right border for FitEval screen*/
+.clsBrdBtm5pxPadding
+{
+    border-bottom: #000000  1px solid;
+    padding:5px 5px 0px 5px;  
+}
+
+/*Used as style class for HTML Center tag*/
+.clsCenterContainer 
+{
+	left: 0px;
+	width: 100%;
+	top: 0px;
+	height: 100%;
+}
+/*Used as style class for HTMLSection */
+.clssection 
+{
+	width:915px;
+	overflow-y:hidden;
+	overflow-x:auto;
+	padding-bottom: 0px;
+}
+/*Used as style class for HTMLSection header*/
+.clssectionheader 
+{	
+	border-top: #b1c3d1 1px solid;
+	border-left: #a8bace 1px solid;
+	border-right: #b1c3d1 1px solid;
+	border-bottom: #839bb3 1px solid;		
+	font-size: 9pt;
+	height: 22px;
+	background: url('../images/sectionheader.gif') top repeat-x;   
+    padding: 0px 0px 0px 10px;
+    vertical-align: middle;
+}
+.clssectionheader td 
+{
+	font-size: 9pt;
+}
+/*Used as style class for HTMLSection Action bar*/
+.clssectionaction 
+{
+	padding: 0px 0px 0px 10px;
+	font-size: 9pt;
+	height: 22px;
+	background: url('../images/subsectionheader.gif') top repeat-x;   
+}
+/*Used as style class for HTML Center tag*/
+.clsContentViewContainer 
+{
+	padding-left: 8px;
+	background: #fff
+}
+/*Used as style class for HTMLContentSection */
+.clsContentSection 
+{
+	width:100%;
+}
+
+/*Used as style class for HTMLContentSection detail section title*/
+.title1Div
+{
+	overflow: hidden;
+}
+/*Used as style class for HTMLContentSection detail section title*/
+.title2Div
+{
+	overflow: hidden;
+}
+
+/* Tracker#: 21452 -  BAMBOO ROSE STRICT MODE - WORK AREA CONTAINER INCORRECT DIMENSIONS AND SCROLLBARS
+ * Using CSS instead of JS to set min-width.
+ */
+#mainContentContainer
+{
+	min-width: 965px;
+	position:relative;
+	overflow:hidden;
+}
+
+/*Used as style class in HTMLPage */
+.clsPageContainer
+{
+	/*height: 570px;*/
+	height: 100%;
+	position: absolute;
+	left: 166px;
+	right: 0;
+	/*width: 960px;
+	margin: 0 0 0 170px; /* nMenuWidth=170, which is left nav width + 6px */
+}
+/*Used as style class in HTMLPage */
+.clsPageHorizontalBar
+{
+    height:47px;
+}
+
+/*Used as style class in HTMLContentViewer Section */
+.tableContentViewerMain
+{
+	/*height:100%;*/
+	height: auto;
+	width: 100%;
+}
+/*Used as style class in HTMLPage */
+.clsPagesecondrow
+{
+    padding-top:0px;
+}
+/*Used as style class for association image */
+.clsassocimg
+{
+    vertical-align:top;
+    height:16px;
+    width:16px;
+}
+/*Used as style class in GridLayout for HTML table cell*/
+.colorWallCell 
+{
+	vertical-align: top;
+	text-align: center;
+	color: #FFF;
+	width: 100px;
+	height: 100px;
+	cursor:move;
+}
+/*Used as style class in the Large & medium view labels*/
+.colorWallCellLabel {
+	font-size: 13px;
+	text-align: center;
+}
+/*Used as style class in GridLayout for label*/
+.colorWallCellLabelSpace 
+{
+	font-size: 13px;
+	text-align: center;
+}
+/*Used as style class for layout repeating section spacing*/
+.clsrptsectionspacing
+ {
+	padding-right:5px;
+ }
+/*Used as style class for Tabs cell*/
+.clsTabCell
+ {
+ 	padding: 0px;
+    vertical-align:top;     
+ }
+/*Used as style class for image scroller*/
+.clsImgScroller
+ {
+ 	border: #BAB7B8 1px solid;
+ }
+/*Used as style class for smart tag header*/
+.clssmarttagheader 
+ {
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+/*Used as style class in Layout for cursor*/
+.clsListSortfield
+{
+	cursor:pointer;
+}
+/*Used as style class for color wall*/
+.colorWallCellSpaceNavigator 
+{
+	vertical-align : top;
+	text-align : center;
+	color : #fff;
+	width : 44px;
+	height : 44px;
+	cursor : pointer;
+}
+/*Used as style class for color wall on selection*/
+.colorWallCellSpaceNavigatorSelected 
+{
+	vertical-align : top;
+	text-align : center;
+	color : #fff;
+	width : 44px;
+	height : 44px;
+	border : 2px solid #000000;
+	cursor : pointer;
+}
+
+/*Used in Color library color palette grid*/
+.clsBarLeftcorner
+{
+	background:url('../images/navleftbararrow.gif');
+	height:21px;
+	width:18px;
+	display:inline-block;
+}
+/*Used in Color library color palette grid*/
+.clsBarCenter
+{
+	font:bold 8pt 'Trebuchet MS', Verdana;
+	color: black;
+	vertical-align:middle;
+	height:21px;
+	width:420px;
+	background:url('../images/navmiddlebar.gif') repeat-x;	
+}
+/*Used in Color library color palette grid*/
+.clsBarRight
+{
+	background:url('../images/navrightbararrow.gif');
+	height:21px;
+	width:18px;
+	display:inline-block;
+}
+/*Used in Color library color palette grid*/
+.clsBarCenterButton
+{
+	font:bold 8pt 'Trebuchet MS', Verdana;
+	color: white;	
+	height:17px;
+	background:url('../images/barcenterbutton.gif') repeat-x;	
+}
+/*Used as style for check box*/
+.clsInput
+{
+	border: #bdd3ff 1px solid;
+	font-family:verdana;
+}
+/*Used in Color library color palette grid*/
+.clscolorpaletteSectionDiv
+{
+	width:480px;
+	overflow: hidden;
+}
+/*Used for change tracking div*/
+/*.clsChngTrkDiv
+{
+	margin-left:40px;
+}*/
+/*Used as style for change tracking description rows*/
+.clsChngTrckSml
+{
+	font-size:7.5pt;
+}
+/*Used as the style for section border*/
+.clsBrdRtLft
+ {
+    border-left:1px solid #D6D6D6;
+    border-right:1px solid #D6D6D6;
+ }
+/*****************************************************************************
+  Navigation classes
+*****************************************************************************/
+/*Used as style for the navigation scroller area */
+.verticalScrollStyle 
+{
+	overflow: hidden;
+	height: 200px;
+	width: 154px;
+}
+/*Used as style for the navigation container */
+.clsNavigatorViewContainer 
+{
+	padding-bottom: 3px
+}
+/*Used as style for the navigation area data */
+.clsNavigatorViewSelHeading 
+{
+	font-size:10pt;
+	font-weight:bold;
+	color: #fff;
+	border-left: #76757A 1px solid;
+	background: url(../images/sprites.png) top no-repeat;
+	background-position: -26px -101px;
+	text-align: left;
+	padding: 0px 0px 0px 10px;	
+	height:25px;	
+}
+/*Used as style for the navigation area data */
+.clsNavigatorViewNotSelHeading 
+{
+	font-size:10pt;
+	font-weight:bold;	
+	border-left: #ddd 1px solid;
+	background: url(../images/sprites.png) top no-repeat;
+	background-position: -192px -101px;
+	text-align: left;
+	padding: 0px 0px 0px 10px;
+	/* Tracker#: 17350 Dashboard left navigation tabs misaligned in Firefox.
+	// fix by removing width property from inner td elements
+	// because width is defined by container.
+	*/
+	height:25px;
+}
+/*Used as style for the navigation area tab container */
+.clsNavigatorViewTabContainer 
+{
+	background: #c5d5e4;
+	border-right: #85A8C4 1px solid;
+	overflow-x: hidden; /* prevent menu items from spilling out of left nav */
+	overflow-y: auto;
+    background: linear-gradient(rgb(255, 255, 255), rgb(197, 213, 229));
+}
+/*Used as style for the navigation area tab button */
+.clsLeftNavButtonOnFocus
+{
+	background:url('../images/sprites.png') no-repeat;
+	background-position: -26px -136px;
+	height:18px;
+	width:9px;
+	text-align: right;	
+	padding: 0px;
+    vertical-align:top;
+}
+/*Used as style for the navigation area tab button */
+.clsCenterNavButtonOnFocus
+{
+	font-weight: bold;
+	color: white;
+	vertical-align:middle;
+	background:url('data:image/gif;base64,R0lGODlhAQARAOMHACdOcjlegU9xkWODoniWs4ypxJKux5KuyJKuyJKuyJKuyJKuyJKuyJKuyJKuyJKuyCH+EUNyZWF0ZWQgd2l0aCBHSU1QACH5BAEKAAgALAAAAAABABEAAAQJEAQxSDnH4L0jADs=') repeat-x;
+	height:18px;	
+	padding: 0px;
+}
+/*Used as style for the navigation area tab button */
+.clsRightNavButtonOnFocus
+{
+	background:url('../images/navbutton_right_onfocus.gif') repeat-x;
+	height:18px;
+	width:9px;	
+	padding: 0px;
+    vertical-align:top;
+}
+/*Used as style for the navigation area tab button */
+.clsLeftNavButtonOffFocus
+{
+	background:url('../images/navbutton_left_offocus.gif') no-repeat;
+	height:18px;
+	width:9px;
+	text-align: right;	
+	padding: 0px;
+    vertical-align:top;
+}
+/*Used as style for the navigation area tab button */
+.clsCenterNavButtonOffFocus
+{
+	font-weight: bold;	
+	background:url('data:image/gif;base64,R0lGODlhAQARAIABAPH1/////yH+EUNyZWF0ZWQgd2l0aCBHSU1QACwAAAAAAQARAAACBISPaQUAOw==') repeat-x;
+	height:18px;	
+	padding: 0px;
+    vertical-align:middle;
+}
+/*Used as style for the navigation area tab button */
+.clsRightNavButtonOffFocus
+{
+	background:url('../images/sprites.png') repeat-x;
+	background-position: -26px -163px;
+	height:18px;
+	width:9px;	
+	padding: 0px;
+    vertical-align:top;
+}
+/*Used as style for Dashboard link on the navigation area*/
+.clsDashAnchor
+{
+	font-size: 9pt;
+	text-decoration:none;
+	border-style: none;
+	color: #000;
+}
+@-moz-document url-prefix() {
+	.clsDashAnchor
+	{
+		padding: 1px 0;
+	}
+}
+:root .clsDashAnchor
+{
+	padding: 1px 0\0/IE9;
+}
+
+.dashOuter
+{
+    border:1px solid #ccc;
+    border-radius:10px;
+    padding-bottom:10px;
+    margin-left:auto;
+    margin-right:auto;
+    line-height:200%;
+    -moz-box-shadow:    0px 0px 10px 3px #ccc;
+    -webkit-box-shadow: 0px 0px 10px 3px #ccc;
+    box-shadow:         0px 0px 10px 3px #ccc;}
+
+.dashInner
+{
+	position:relative;
+	padding-left:10px;
+	padding-top:5px;
+	overflow:auto;
+}
+
+.dashInner a
+{
+    color:#00468C;
+}
+
+#dashTitle
+{
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+	text-indent:10px;
+    width:100%;
+    font-size:13px;
+    color: #555;
+    background:linear-gradient(#EFF4F8, #D5E0ED) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #ddd;
+    padding-top: 1px;
+    font-weight: normal;
+}
+
+/*Used as style for navigation area data*/
+.clsNavChildren
+{
+	font-weight: bold;
+	border-style: none;
+}
+/*****************************************************************************
+  Tabs Menu classes
+*****************************************************************************/
+/*Used as style for Menu*/
+.clsTextTrimNavigation
+ {
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   border-style: none;
+   overflow:hidden;
+   width:55px;   
+   font-weight: bold;   
+   color:#000;
+ }
+/*Used as style for Menu*/
+.selectedNodes
+{
+	background-color:#F1F5FF;
+	font-weight: bold;	
+	border-style: none;
+}
+
+/*Used as style for LHS of button UI*/
+.clsLeftcornerButton
+{
+	background:url('../images/toolbarbuttonleft.gif') repeat-x;
+	height:18px;
+	width:9px;
+	padding: 0px;
+    vertical-align:top;
+}
+/*Used as style for center of button UI*/
+.clsCenterButton
+{
+	font-weight: bold;
+	vertical-align:middle;
+	background:url('../images/toolbarbuttoncenter.gif') repeat-x;
+	height:18px;	
+	text-align: center;
+	padding: 0px;
+}
+/*Used as style for RHS of button UI*/
+.clsRightButton
+{
+	background:url('../images/toolbarbuttonright.gif')  no-repeat;
+	height:18px;
+	width:9px;
+	padding: 0px 3px 0px 0px;
+    vertical-align:top;
+}
+/*Used as style for LHS of button UI on mouse over*/
+.clsLeftcornerButtonmover
+{
+	background-image:url('../images/toolbarbuttonleft_dark.gif');
+	height:18px;
+	width:9px;
+	background-repeat: repeat-x;
+    vertical-align:top;
+}
+/*Used as style for center of button UI on mouse over*/
+.clsCenterButtonmover
+{
+	font-weight: bold;
+	background-image:url('../images/toolbarbuttoncenter_dark.gif');
+	height:18px;
+	background-repeat: repeat-x;
+	text-align: center;
+	vertical-align:middle;
+}
+/*Used as style for RHS of button UI on mouse over*/
+.clsRightButtonmover
+{
+	background-image:url('../images/toolbarbuttonright_dark.gif');
+	height:18px;
+	width:9px;
+	background-repeat: no-repeat;
+	padding: 0px 3px 0px 0px;
+	vertical-align:top;
+}
+/*Used as style class for tab on focus*/
+.clsLeftcornerTabOnfocus
+{
+	background:url('../images/leftcornertab_onfocus.gif') repeat-x;
+	height:25px;
+	width:5px;	
+ 	padding: 0px;
+    vertical-align:top;
+}
+/*Used as style class for tab on focus*/
+.clsCenterTabOnfocus
+{	
+	font-weight: bold;	
+	background:url('../images/middletab_onfocus.gif') repeat-x;
+	height:18px;
+	text-align: center;
+ 	padding: 3px 1px 0;
+	vertical-align:top;
+}
+/*Used as style class for tab on focus*/
+.clsRightTabOnfocus
+{
+	background:url('../images/rightcornertab_onfocus.gif') repeat-x;
+	height:25px;
+	width:5px;	
+ 	padding: 0px;
+	vertical-align:top;
+}
+/*Used as style class for tab off focus*/
+.clsLeftcornerTabOfffocus
+{
+	background:url('../images/leftcornertab_offfocus.gif') repeat-x;
+	height:25px;
+	width:5px;	
+ 	padding: 0px;
+	vertical-align:top;
+}
+/*Used as style class for tab off focus*/
+.clsCenterTabOfffocus
+{	
+	font-weight: bold;
+	background:url('../images/middletab_offfocus.gif') repeat-x;
+	height:18px;	
+	text-align: center;
+ 	padding: 3px 1px 0;
+	vertical-align:top;
+}
+/*Used as style class for tab off focus*/
+.clsRightTabOfffocus
+{
+	background:url('../images/rightcornertab_offfocus.gif') repeat-x;
+	height:25px;
+	width:5px;
+ 	padding: 0px;
+	vertical-align:top;
+
+}
+/*Used as style class for tab space*/
+.clsTabSpacer
+{
+	background:url('../images/spacer.gif') repeat-x;
+	height:25px;
+	width:1px;
+ 	padding: 0px;
+    vertical-align:top;
+}
+/*Used as style class for Comments icon & Change alert icon as in Tech Spec*/
+.clsOverviewToolIcon 
+{
+    margin-left:5px;
+}
+/*****************************************************************************
+  Advanced Search classes
+*****************************************************************************/
+/*Used as style class for Advanced search section.*/
+.clssearchsection 
+{
+	padding-bottom: 5px;
+	/*width:915px;*/
+	overflow-y:hidden;
+}
+/*Used in Saved Searches Pop up labels*/
+.clsTextLabelSavedSrch
+{
+    font-size: 7pt;    
+    vertical-align:middle;
+    color:#000;
+}
+/*Used in Saved Searches display Pop up*/
+.clsPopupHeader 
+{
+	background:#36F;
+	height:15px;
+	font-size: 5pt;
+	cursor:move;
+}
+/*Used in Save Search  Name entry Pop up*/
+.clsSavedPopupHeader 
+{
+	font-size:9pt;
+	font-weight:bold;
+	height: 25px;
+	vertical-align:bottom;
+	background:#B5C7F7;
+}
+/*Used in Save Search  Name entry  Pop up body*/
+.clsPopupBody 
+{
+	background:#B5C7F7;
+}
+
+/*Used as text property for Popups in ToolsArea and Search*/
+.clsPopupText 
+{
+	/*height:17px;*/
+	font-size: 7pt;
+	width:115px;
+}
+/*Used in Save button of Save Search  popup*/
+.clsokcancel 
+{
+	background: url('../images/ok_cancel.gif') no-repeat;
+	display: inline-block; /* For buttons to display correctly in Firefox/Safari. */
+	width:64px;
+	text-align: center;
+	cursor:pointer;
+	padding-right:4px;
+	padding-bottom:4px;
+}
+/*Section header class for Advanced Search sections*/
+.clsadvsrchsectionheader, .clsadvsrchsectionheader td
+{
+	font-weight: bold;
+	font-size: 9pt;
+	height: 25px;	
+}
+/*Used for Saved Seaches Label*/
+.clsadvsrchlabelheader 
+{
+	font-weight: bold;
+	height: 25px;
+	vertical-align:bottom;
+}
+/*Used as style for Save Search Name entry Div*/
+.clssrchpopup
+{
+	z-index:998;
+	top:400px;
+	left:300px;
+	position:absolute;
+	border-left: #d6d6d6 1px solid;
+	border-right: #d6d6d6 1px solid;
+	border-bottom: #d6d6d6 1px solid;
+	background:#B5C7F7;
+}
+/*Used as style for Save Search Name entry  Div for the IFrame - for IE 6 to avoid bleeding for controls thru div*/
+.clsSrchNameIFrame
+{
+	z-index:997;
+	top:400px;
+	left:300px;
+	height:228px;
+	width:205px;
+	position:absolute;
+	border:none;
+	display:none;
+}
+/*Tracker#: 16224 GETTING HTTPS ERRORS ON THE PLM SCREENS
+Adding a new css for the messaging and processing bar iframes*/
+.clsmessagingIFrame
+{
+	z-index:997;
+	top:-100px;
+	left:-100px;
+	height:0px;
+	width:0px;
+	/* Tracker#: 17675 - FIREFOX/SAFARI: DESIGN DASHBOARD IFRAMES PUSH ENTIRE LAYOUT DOWN
+	   Adding missing position property*/
+	position: absolute;
+}
+/*Used as style for Saved Searches Popup Div for the IFrame - for IE 6 to avoid bleeding for controls thru div*/
+.clsSavedSrchIFrame,.clsSavedSearch
+{
+	z-index:997;
+	top:60px;
+	left:560px;
+	width:205px;
+	height:211px;
+	position:absolute;
+	display:none;
+	border:none;
+	background-position: 0px -345px;
+}
+/*Used in Saved Searches Popup div*/
+.clsSavedSearch
+{
+	z-index:998;
+	width:190px;
+	height:210px;
+	visibility:hidden;	
+}
+
+/*Used as style for Saved Searches div*/
+.clsSavedSearchCont
+{
+	max-height:200px;
+	overflow-y:auto;
+	overflow-x:hidden;
+	background:#B5C7F7;
+	padding-right:20px;
+	border-left: #d6d6d6 1px solid;
+	border-right: #d6d6d6 1px solid;
+	border-bottom: #d6d6d6 1px solid;
+}
+/*Used as style for Saved Searches display after save div*/
+.clsSavedSearchOnSaveCont
+{
+	max-height:150px;
+	overflow-y:auto;
+	background:#B5C7F7;
+	padding-right:20px;
+	border-left: #d6d6d6 1px solid;
+	border-right: #d6d6d6 1px solid;
+	border-bottom: #d6d6d6 1px solid;
+}
+/*Used as a style for Delete button on saved search*/
+.clsdeletesearch 
+{	
+	background: url('../images/ok_cancel.gif') no-repeat;	
+	width:64px;
+	text-align: center;
+	cursor:pointer;
+	padding-right:4px;
+	padding-bottom:4px;
+}
+/*Used as a style for close button*/
+.closeBtn
+{
+	width:10px;
+	height:10px;
+	cursor:pointer;
+	display:block;
+	padding-right:2px;
+}
+/*****************************************************************************
+  Tools Mystuff classes
+*****************************************************************************/
+/*Used as style for the clipbaord individual palette cells*/
+.cboardPaletteCell
+{
+	color: #FFF;
+	height: 20px;
+	width: 10px;
+	font-size: 2px;
+}
+/*Used as style for the ToolsArea Contents section*/
+.clsToolsSection
+{
+	padding: 0px 0px 5px 0px;
+	width:913px;
+	overflow-y:hidden;
+	overflow-x:auto;
+}
+/*Used as style for the entire ToolsArea section*/
+.clsToolArea
+{
+	height: 182px;
+	width:1080px;
+	padding: 0px 0px 2px 0px;
+}
+/*Used as style for LHS section of the tools area*/
+.clsLeftCellToolArea
+{
+    padding: 0px 5px 0px 10px;
+    width: 162px;
+	background: #666;	
+}
+/*Used as style for right hand side section of the tools area*/
+.clsRightCellToolArea
+{
+	padding: 0px 0px 5px 10px;
+	background: #808080;
+	vertical-align:top;
+}
+/*Used as style for right hand side bootm row of the tools area*/
+.clsRightCellToolAreaBottom
+{
+    background: #808080;
+	vertical-align:bottom;
+}
+/*Used as style for scroll bar on the tools area*/
+.clsScrollBar
+{
+	display: block;
+	height: 152px;
+    background: #999;
+    width:890px;
+    border-top: #666 1px solid;
+	border-bottom: #666 1px solid;
+}
+/*Used as style for vertical scroll bar*/
+.clsVerticalScrollBar
+{
+	height: 200px;
+    background: #DEE2E6;
+    width:154px;
+    border-top: #666 1px solid;
+	border-bottom: #666 1px solid;
+}
+/*Used as the style for data inside the clipboard*/
+.clsCBTableData 
+{	
+	color: #fff;	
+	white-space: nowrap;
+}
+/*Used as the style for data on the left side of the clipboard*/
+.clsToolAreaHeader 
+{
+	font-size: 10pt;
+	color: #fff;	
+	font-weight: bold;
+	padding-left: 12px;
+}
+/*Used as style for Select box on the LHS*/
+.clsToolAreaSelect 
+{
+	width:132px;
+	height:17px;	
+}
+/*Used as style for LHS clipboard type display*/
+.clsCBTypeStrip
+{
+	background:url('../images/cbstrip.jpg') repeat-x;
+	width:155px;
+}
+/*Used as style for clpboard share pop up window header*/
+.clsUserPopupShareSectionHeaderCB 
+{
+	font-size: 9pt;	
+	border-top: #b1c3d1 1px solid;
+	border-left: #a8bace 1px solid;
+	border-right: #b1c3d1 1px solid;
+	border-bottom: #839bb3 1px solid;	
+	height: 22px;
+	width: 459px;
+	background: url('../images/sectionheader.gif') top repeat-x;
+    padding-bottom: 0px;
+}
+/*Used as style for the user section div*/
+.clsCBUserResultDiv
+{
+	width: 460px;
+	height: 180px;
+	overflow-y:auto;
+}
+ /*Used as style class for Libraries section labels*/
+ .clsLBTableData 
+ {	
+	color: #fff;	
+	white-space: nowrap;
+}
+/*Used as style class for Tabs space in tools area section*/
+.clsToolsTabSpacer
+{
+	background:#808080;
+	height:25px;
+	width:1px;
+	padding: 0px;
+    vertical-align:top;
+}
+/*Used as style class in HTMLPopupButton*/
+.clsLeftPopupButton
+{
+	background:url('../images/popupbuttonleft.gif') repeat-x;
+	height:20px;
+	width:9px;
+	padding: 0px;
+    vertical-align:top;
+}
+/*Used as style class in HTMLPopupButton*/
+.clsCenterPopupButton
+{	
+	font-weight: bold;
+	vertical-align:middle;
+	background:url('../images/popupbuttoncenter.gif') repeat-x;
+	height:20px;
+	width:50px;
+	text-align: center;
+	padding: 0px;
+    vertical-align:top;
+}
+/*Used as style class in HTMLPopupButton*/
+.clsRightPopupButton
+{
+	background:url('../images/popupbuttonright.gif') repeat-x;
+	height:20px;
+	width:9px;	
+	padding: 0px;
+    vertical-align:top;
+}
+/*Used as style class in Tools area close button*/
+.clsToolClose {	
+	color: #000;	
+	cursor:pointer;
+}
+/*Used as style class for the scrollable area*/
+.scrollStyle {
+	overflow: hidden;
+	height: 150px;
+	width: 890px;
+}
+/*Used as style class for the text in tools area*/
+.clsTextLabelToolbar
+{
+    color: #FFF;
+    vertical-align:middle;
+}
+/*Used as style class in tools area*/
+.clsLibSmall
+ {
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow:hidden;  
+   font-size: 7pt;
+   color:#FFF;
+ }
+ /*Used as style class for the text in tools area*/
+ .clsCPTextTrim,.clsCPLTextTrim
+ {
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow:hidden;
+   width:55px;
+ }
+ /*Used as style class for the text in tools area*/
+ .clsCPLTextTrim
+ {
+   width:95px;
+ } 
+
+ /*Used as style class for the text in tools area color square*/
+.colorWallCellSpace {
+	vertical-align: top;
+	text-align: center;
+	color: #FFF;
+	width: 50px;
+	height: 50px;
+	cursor:move;
+}
+/*Used as style class for the view buttons*/
+.clsToolAreaButtons
+{
+    right: 12px;
+	background: #666;
+	position:relative;
+}
+/*****************************************************************************
+	Style classes used in Message Popups 
+*****************************************************************************/
+.clsNameDivHeaderGreenLeft
+{
+	background:url('../images/greenheaderleft.gif') repeat-y;	
+}
+.clsNameDivHeaderGreenMiddle
+{
+	background:url('../images/greenheadermiddle.gif') repeat;
+	width:210px;
+}
+.clsNameDivHeaderGreenRight
+{
+	background:url('../images/greenheaderright.gif') repeat-y;	
+}
+
+.clsNameDivBodyGreenLeft
+{
+	background:url('../images/greenbdleft.gif') repeat-y;	
+}
+
+.clsNameDivBodyGreenMiddle
+{
+	color: black;
+	background:url('../images/greenbdmiddle.gif') repeat;
+	width:210px;
+}
+.clsNameDivBodyGreenRight
+{
+	background:url('../images/greenbdright.gif') repeat-y;
+}
+
+.clsmsgTable
+{
+ 	width:100%;
+ 	border-collapse:collapse;
+
+}
+
+.clsNameDivFooterLeftGreen
+{
+	background:url('../images/greenftrleft.gif') no-repeat;
+}
+
+.clsNameDivFooterMiddleGreen
+{
+	background:url('../images/greenftrmiddle.gif') repeat ;	
+}
+
+.clsNameDivFooterRightGreen
+{
+	background:url('../images/greenftrright.gif') no-repeat;	
+}
+
+.clsNameDivHeaderRedLeft
+{
+	background:url('../images/redheaderleft.gif') repeat-y;	
+}
+.clsNameDivHeaderRedMiddle
+{
+	background:url('../images/redheadermiddle.gif') repeat;	
+	width:210px;
+}
+.clsNameDivHeaderRedRight
+{
+	background:url('../images/redheaderright.gif') repeat-y;	
+}
+
+.clsNameDivBodyRedLeft
+{
+	background:url('../images/redbdleft.gif') repeat-y;
+}
+
+.clsNameDivBodyRedMiddle
+{
+	color: black;
+	background:url('../images/redbdmiddle.gif') repeat;
+	width:210px;
+}
+.clsNameDivBodyRedRight
+{
+	background:url('../images/redbdright.gif') repeat-y;
+}
+
+.clsNameDivFooterLeftRed
+{
+	background:url('../images/redftrleft.gif') no-repeat;
+
+}
+
+.clsNameDivFooterMiddleRed
+{
+	background:url('../images/redftrmiddle.gif') repeat;
+}
+
+.clsNameDivFooterRightRed
+{
+	background:url('../images/redftrright.gif') no-repeat;
+}
+
+.clsNameDivHeaderYellowLeft
+{
+	background:url('../images/yellowheaderleft.gif') repeat-y;
+}
+.clsNameDivHeaderYellowMiddle
+{
+	background:url('../images/yellowheadermiddle.gif') repeat;
+	
+}
+.clsNameDivHeaderYellowRight
+{
+	background:url('../images/yellowheaderright.gif') repeat-y;
+}
+
+.clsNotesTextReadOnly
+ {
+    BORDER: #7F9DB9 1px solid;
+    font-weight: 200;
+    BACKGROUND: #d9d9d9;        
+ }
+
+.clsNameDivBodyYellowLeft
+{
+	background:url('../images/yellowbdleft.gif') repeat-y;	
+}
+
+.clsNameDivBodyYellowMiddle
+{
+	color: black;
+	background:url('../images/yellowbdmiddle.gif') repeat;
+	width: 210px;
+}
+.clsNameDivBodyWhite
+{
+	font-size: 12pt;
+	color: black;
+}
+.clsNameDivBodyYellowConfirm
+{
+	color: black;
+	background:url('../images/yellowbdmiddle.gif') repeat;
+}
+
+.clsNameDivBodyYellowRight
+{
+	background:url('../images/yellowbdright.gif') repeat-y;
+}
+
+.clsNameDivFooterLeftYellow
+{
+	background:url('../images/yellowftrleft.gif') no-repeat;
+}
+
+.clsNameDivFooterMiddleYellow
+{
+	background:url('../images/yellowftrmiddle.gif') repeat;
+}
+
+.clsNameDivFooterRightYellow
+{
+	background:url('../images/yellowftrright.gif') no-repeat;
+}
+
+.clsMsgText
+{
+	color: white;
+}
+.clsOkMsgText
+{
+	font-size: 12pt;	
+	color: white;
+}
+
+/*Used as style class in HTMLMessageBox class*/
+.clsMsgBoxTopLeft
+{
+	background:url('../images/msgboxtopleft.gif');
+	width:29px;
+}
+/*Used as style class in HTMLMessageBox class*/
+.clsMsgBoxTopCenter
+{
+	background:url('../images/msgboxtopmiddle.gif') repeat-x;	
+}
+/*Used as style class in HTMLMessageBox class*/
+.clsMsgBoxTopRight
+{
+	background:url('../images/msgboxtopright.gif');
+	width:29px;
+}
+/*Used as style class in HTMLMessageBox class*/
+.clsMsgBoxBtmLeft
+{
+	background:url('../images/msgboxbtmleft.gif');
+}
+/*Used as style class in HTMLMessageBox class*/
+.clsMsgBoxBtmCenter
+{
+	background:url('../images/msgboxbtmmiddle.gif') repeat-x;
+	height:30px;	
+}
+/*Used as style class in HTMLMessageBox class*/
+.clsMsgBoxBtmRight
+{
+	background:url('../images/msgboxbtmright.gif') repeat-x;
+}
+/*Used as style class in HTMLMessageBox class*/
+.clsMsgBoxRow2RightBar
+{
+	background:url('../images/msgboxcenterbar.gif') repeat-x;
+}
+/*Used as style class in HTMLMessageBox class*/
+.clsMsgBoxRow2LeftBar
+{
+	background:url('../images/msgboxcenterbarleft.gif');
+}
+/*Used as style class in HTMLMessageBox class*/
+.clsMsgBoxCenterDot
+{
+	font-style: italic;
+	color: green;
+	background:url('../images/msgboxcenterdot.gif') repeat;
+}
+/*Used as style class in HTMLMessageBox class*/
+.clsMsgBoxButtonRightPadding
+{
+	padding: 0px 30px 0px 0px;
+}
+
+
+/*****************************************************************************
+  Sourcing side used classes
+*****************************************************************************/
+/*Query builder*/
+/*Tracker#23209 - Changed the value of text-align property value to left*/
+.clslibtabledata 
+{
+	font-size: 5pt;	
+	text-align:left;
+	border-bottom:0px;
+	border-right:0px;
+	width:2px;
+}
+/*Used as style class in Sell channel*/
+.clspopupsectiontabcolor
+{	
+	height: 18px;
+	background: url('../images/subsectionheader.gif') top repeat-x;
+}
+
+
+.clsLabelAsTextBox
+{
+	border: #bdd3ff 1 solid;
+	width:15px;
+    COLOR: #000000;
+    valign:middle;
+    overflow: hidden;   
+    WHITE-SPACE: wrap;
+}
+
+
+
+
+/*****************************************************************************
+* autosuggest.css
+*****************************************************************************/
+
+.s_row, .s_highlight 
+{
+	background: #fff;
+	padding: 2px 2px 2px 6px;
+}
+
+.s_row1 
+{
+	background: #eff7ff;
+	padding: 2px 2px 2px 6px;
+}
+
+.s_highlight 
+{
+    background:#b3d4ff;
+}
+
+.s_table 
+{
+    border:1px solid #eff7ff;
+	background: #a3c1e0;
+}
+
+/*tracker#17087 s-dashboard message box scrolls inconsistently 
+  new css class declarations to define the style for cell<td> in autosuggest*/
+.s_cell 
+{
+	color: #000;
+}
+
+
+/*****************************************************************************
+* validationsearch.css
+*****************************************************************************/
+.searchBar 
+{
+    background:#EEF2F7;
+    height: 22px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.searchPaginationLabels,.searchLabels,.searchBarTitle,.searchToolBar,.searchButtonLabels,.searchPaginationAnchor,.searchListData 
+{
+    font: 8pt "Trebuchet MS", Verdana, Arial, Helvetica,
+    sans-serif;
+    color: black;
+    text-align: left;
+}
+
+.searchLabels,.searchBarTitle,.searchToolBar,.searchButtonLabels,.searchListData 
+{
+    font: 7pt "Trebuchet MS", Verdana, Arial, Helvetica,
+    sans-serif;
+    letter-spacing: 2px;    
+}
+
+.searchBarTitle,.searchToolBar
+{
+    background:#EEF2F7;        
+}
+
+.searchToolBar 
+{
+    background:#EEEEEE url(../images/sectionheader.gif) repeat;
+    height: 22px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.searchButtonLabels 
+{
+    cursor:pointer;
+}
+
+.searchPaginationAnchor 
+{
+    text-decoration:underline;
+}
+
+.searchListLabels 
+{
+    font: bold 7pt "Trebuchet MS", Verdana, Arial, Helvetica,
+    sans-serif;
+    color: black;
+    letter-spacing: 2px;    
+}
+
+.searchBottomBorder 
+{
+    border-bottom:#96AFCF 2px solid;
+}
+
+.searchFields 
+{
+    padding:0px 0px 2px 5px;
+    
+}
+
+.searchFieldsLast 
+{
+    padding:0px 5px 2px 5px;    
+}
+
+.searchBlackBorderTable 
+{
+    border: black 1px solid;    
+}
+
+.searchInput,.searchOpDropDown
+{
+    color: black;
+    border: #bdd3ff 1px solid;/*<%--Tracker# 20524  css optimization- Added border*/
+}
+
+.searchOpDropDown 
+{
+    letter-spacing: 2px;
+    text-align: left;    
+    color: #000;
+    height:16px;
+	width:115px;
+}
+
+.searchListRowHighlight 
+{
+    background: #F4EDAD;
+}
+
+.searchListTable
+{
+    padding:0px;    
+    text-align:center;
+    border-collapse: collapse;
+}
+
+/*Override parent screen global tr, td in 'screen.css' on specific screens like Query Viewer*/
+div#validationsearchcontroldiv tr 
+{
+    background: transparent;
+}
+
+div#validationsearchcontroldiv td
+{
+    padding:0px;
+    vertical-align:middle;
+}
+
+.transimage 
+{
+	filter:alpha(opacity=25);
+	opacity: 0.5;
+	-moz-opacity:0.5;
+}
+
+
+
+.clBar 
+{
+    position: absolute; 
+    width: 10px; 
+    height: 10px; 
+    background-color: #59c1a9;
+    color: white;
+    visibility: hidden
+}
+.clLevel0, .clLevel0over, .cmDisabledItem, .cmDisabledItemOver
+{
+	font-family: tahoma,arial,helvetica; 
+	font-size: 12px; 
+    font-weight: bold;
+	padding: 2px;
+}
+.clLevel0 
+{
+    position: absolute; 
+    background-color: #59c1a9;
+    color: #fff; 
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.clLevel0over
+{  
+    position:absolute; 
+    background-color: #006699;
+    border: 1px inset black;
+    color: #fff;
+    cursor: pointer; 
+    white-space: nowrap;
+}
+.clLevel0 img, .clLevel0over img 
+{
+    vertical-align: middle;
+}
+.clLevel0border
+{
+    position: absolute; 
+    visibility: hidden; 
+}
+.clLevel1border
+{
+    position: absolute; 
+    visibility: hidden; 
+    background-color: #666; 
+}
+.menuArrows 
+{
+    vertical-align: middle;
+}
+/* these classes are for disabled items */
+.cmDisabledItem 
+{
+    position: absolute; 
+    background-color: red; 
+    color: #000;
+    vertical-align: middle;
+}
+.cmDisabledItemOver 
+{
+    position:absolute; 
+    background-color: #c0c0c0; 
+    border: 1px inset black;
+    color: black; 
+    cursor: pointer; 
+}
+
+
+/*****************************************************************************
+* lsb.css
+*****************************************************************************/
+.c0Plus ,.c0PlusClck,.c0PlusOver,.c0PlusClckOver,.c1Plus,.c1PlusClck,.c1PlusOver ,.c1PlusClckOver,.c2Plus,.c2PlusClck,.c2PlusOver ,.c2PlusClckOver 
+{
+    position: absolute;
+    border-bottom:1px solid #234682; 
+    border-right:1px solid #234682; 
+    border-left:1px solid #FFF; 
+    border-top:1px solid #FFF; 
+    background-color:#B0CBE7;
+    font-size: 11px;
+    vertical-align: middle;
+    cursor:pointer;
+    background:#B0CBE7 url('../images/dashp.gif') no-repeat right 50%;
+}
+
+.c0PlusClck
+{
+    padding: 2px;
+    background:#B0CBE7 url('../images/dashm.gif') no-repeat right 50%;
+}
+ 
+.c0, .c0Plus
+{
+	height:18px;
+}
+
+.c0PlusOver,.c0PlusClckOver,.c1PlusOver ,.c1PlusClckOver ,.c2PlusOver ,.c2PlusClckOver
+{
+    border-left:2px solid #85AAE1;
+    border-right:1px solid #234682;
+    border-top:2px solid #85AAE1;
+    background-color: #85AAE1;
+    padding: 2px;
+    background:#85AAE1 url('../images/dashp.gif') no-repeat right 50%;
+}
+
+.c0PlusClckOver
+{
+    background:#85AAE1 url('../images/dashm.gif') no-repeat right 50%;
+}
+
+.c1Plus,.c1PlusClck
+{
+    padding: 2px;    
+    text-indent: 1em; 
+}
+
+.c1PlusClck
+{
+    background:#B0CBE7 url('../images/dashm.gif') no-repeat right 50%;
+    text-indent: 1em; 
+}
+
+
+.c1PlusOver ,.c1PlusClckOver
+{
+    text-indent: 1em; 
+}
+
+.c1PlusClckOver
+{
+    background:#85AAE1 url('../images/dashm.gif') no-repeat right 50%;
+}
+
+
+.c2Plus,.c2PlusClck
+{
+    padding: 2px;
+    text-indent: 2em;
+}
+
+.c2PlusClck
+{
+    background:#B0CBE7 url('../images/dashm.gif') no-repeat right 50%;
+}
+
+.c2PlusOver ,.c2PlusClckOver
+{
+    text-indent: 2em;
+}
+
+.c2PlusClckOver 
+{
+    background:#85AAE1 url('../images/dashm.gif') no-repeat right 50%;
+}
+
+.c0 ,.c1,.c2 ,.c3
+{
+    position: absolute;
+    border-bottom:1px solid #234682;
+    border-right:1px solid #234682;
+    border-left:1px solid #FFF;
+    border-top:1px solid #FFF;
+    background-color: #B0CBE7;
+    padding: 2px;
+    font-size: 11px;
+    vertical-align: middle;
+    cursor: pointer;    
+}
+
+.c1 ,.c2 ,.c3
+{
+    text-indent: 1em; 
+}
+.c2 
+{
+    text-indent: 2em;
+}
+.c3 
+{
+    text-indent: 3em;
+}
+
+.c0Over ,.c1Over ,.c2Over ,.c3Over 
+{
+    position: absolute;
+    border-left:2px solid #85AAE1;
+    border-right:1px solid #234682;
+    border-top:2px solid #85AAE1;
+    background-color: #85AAE1;
+    padding: 2px;
+    font-size: 11px;
+    cursor: pointer;
+    vertical-align:sub;
+}
+
+.c1Over ,.c2Over ,.c3Over 
+{
+    vertical-align: middle;
+    text-indent: 1em; 
+}
+
+.c2Over 
+{
+    text-indent: 2em;
+}
+.c3Over 
+{
+    text-indent: 3em;
+}
+
+#dolist
+{
+	font-size:12px;
+	color:#FFF;
+	text-decoration:none;
+	background-image:url('data:image/gif;base64,R0lGODlhAQAZAIcAAAFZTQJfVQJfVwNbXwJdWAJcXApOfwRXZQZXagZWbQZXbAJZYwNaYwdTcwdUcAhSdwhReghSeQhOggpQgxRXiytol05+pnudwJOuywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAP8ALAAAAAABABkAAAgfADFcsFCBgoQJBiBEeNDAQQIFCA4sYDCgAAEBAQAEBAA7');
+	background-repeat:repeat-x;
+}
+
+
+/*****************************************************************************
+* notes.css
+*****************************************************************************/
+/* This is the class for displaying post-it like notes */
+.note 
+{
+    position: relative; 
+    top: 50px;
+    background: #ffd; 
+    color: #000;
+    border: 1px dotted #c0c0c0;
+    width: 250px;
+    padding: 5px;
+}
+.note a 
+{
+	color: #f90;
+	background-color: transparent;
+}
+
+
+/*****************************************************************************
+* queryviewerplm.css
+*****************************************************************************/
+/* to reduce or adjust the width of the select box (mainly for operators) in the searchable section */
+ 		
+div#QV_FLTR_OPEN SELECT
+{
+	height:16px;
+}
+
+/* Tracker#:20524 - PLM - CSS  OPTIMIZATION 
+ * to fix background color issue for search result header of Query view page from plm dashboard*/
+td.dtlt
+{
+	background: #fff;
+	color:#000;
+	border-bottom: 1px solid #000;
+	font-size: 9pt;
+	font-weight:bold;
+	vertical-align:middle;
+	border-left:1px solid #fff;
+}
+
+
+/*****************************************************************************
+* comments.css
+*****************************************************************************/
+ul, ol
+{
+	line-height: 15px;
+}
+
+#nav
+{
+	padding: 0;
+	margin: 0;
+}
+
+#nav li
+{
+	list-style-type:none;padding: 5px 0 0;
+}
+
+.divclssection 
+{
+    padding-bottom: 0px;
+}
+
+.tdl_inputControls 
+{
+	visibility: visible; 
+	background: none repeat scroll 0% 0% rgb(228, 234, 238); 
+	left: 165px; top: 100px;
+}
+
+.tdl_txtboldblue3
+{
+	color:#0073ba;
+	font-weight:bold;
+}
+
+
+.tdl_printCmt
+{
+	line-height: 15px;
+	text-decoration:none;
+}
+
+.tdl_replyCmt
+{
+	line-height: 15px;
+	text-decoration:none;
+}
+
+.tdl_recipients
+{
+	line-height: 15px;
+	text-decoration:none;
+}
+
+.tdl_date, .tdl_recipients, .tdl_replycmt, .tdl_printCmt
+{
+	color:rgb(153,153,153);
+}
+
+.tdl_rootContainer
+{
+	margin: 4px;
+}
+
+.tdl_replyComment
+{
+	margin-left:-20px;
+}
+.tdl_commentDiv
+{
+	display: block;
+	overflow: hidden;
+}
+
+.tdl_actorList
+{
+	height:80px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.tdl_heading 
+{
+	visibility: visible; 
+	background: none repeat scroll 0% 0% rgb(228, 234, 238);
+}
+
+.hr_style
+{
+	color: rgb(141, 211, 216);
+	height: 1px;
+}
+
+.fc-tss-button-faded 
+{
+    opacity:.5;
+    filter: alpha(opacity=40);
+}
+
+.fc-tss-button 
+{
+    opacity:1;
+    filter: alpha(opacity=100);
+}
+
+
+/*****************************************************************************
+* globalsearch.css
+*****************************************************************************/
+.clsgenadvsrchsec 
+{
+	border-top: #d6d6d6 1px solid;
+	border-left: #d6d6d6 1px solid;
+	border-right: #d6d6d6 1px solid;
+	border-bottom: #d6d6d6 1px solid;	
+	width: 700px;
+	display:none;
+}
+.clsgenadvsrchsechdr 
+{	
+	border-top: #b1c3d1 1px solid;
+	border-left: #a8bace 1px solid;
+	border-right: #b1c3d1 1px solid;
+	border-bottom: #839bb3 1px solid;		
+	font-size: 9pt;
+	height: 22px;
+	background: url('../images/sectionheader.gif') top repeat-x;   
+    padding: 0px 0px 0px 10px;
+    width: 700px; 
+}
+
+.clsspsearchsection {
+	padding-bottom: 5px;
+	width:910px;
+	overflow:hidden;
+	FONT-FAMILY: 'Trebuchet MS', Verdana;
+}
+
+
+/*****************************************************************************
+* multipom.css
+*****************************************************************************/
+html, body, form[name="frmMPW"], #mainScrollArea
+{
+	height: 100%;
+}
+
+body, form[name="frmMPW"]
+{
+	margin: 0;	
+}
+
+html, body
+{
+	/*
+	 Issue - IE8: vertical scrollbar reduces screen width,
+	 thus causing resetAllMainDivs function to not fire in
+	 _multipomResetMainDivs function when first entering
+	 multipom screen.
+	 Fix - set overflow:auto so scrollbar is hidden when not needed.
+	*/
+	overflow: hidden;
+}
+
+body
+{
+	border: #FFFFFF 1px solid;
+}
+
+#mainScrollArea
+{
+	position: relative;
+	overflow: auto;
+	width: 100%;
+}
+
+/*
+	Rules starting with underscore are ignored by IE;
+	Following rules for non-IE browsers.
+*/
+#_tableContentViewerMain_DATA_multiPOMWindow,
+#_tableContentViewerMain_DATA_multiPOMWindow > tbody,
+#_tableContentViewerMain_DATA_multiPOMWindow > tbody > tr,
+#_tableContentViewerMain_DATA_multiPOMWindow > tbody > tr > td
+{
+	display: block;
+	width: auto;
+}
+
+
+/*****************************************************************************
+* multirowdragdrop.css
+*****************************************************************************/
+#multiRowDragDropContainer, #singleRowDragDropContainer
+{
+	position: absolute;
+	z-index: 101;
+	cursor: move;
+	background-color: #006699;
+	-moz-box-shadow: 2px 2px 2px 0px #222222;
+	-webkit-box-shadow: 2px 2px 2px 0px #222222;
+	box-shadow: 2px 2px 2px 0px #222222;
+}
+#multiRowDragDropContainer tr
+{
+	background-color: #FFFFFF;
+}
+
+table.tableDnD_table
+{
+	cursor: move;
+}
+table.tableDnD_table tr.nodrag
+{
+	cursor: default;
+}
+
+div.multiRowDragDropIndicator
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-color: #1CACEE;
+	height: 1px;
+	width: 3000px;
+	overflow:hidden; /* IE QuirksMode - font affects height */
+}
+/*
+    ----------------------------------------------------
+    Tracker#: 22029
+    More Details Pop Up TitleBar style attributes
+    ----------------------------------------------------
+*/
+.clsPopUpTitleBar
+{
+    font-family: 'Trebuchet MS', Verdana;
+	font-size: 8pt;
+    border: 1px solid #85a8c4;
+    color: #000000;
+    position:relative;
+    border-top: #b1c3d1 1px solid;
+	border-left: #a8bace 1px solid;
+	border-right: #b1c3d1 1px solid;
+	border-bottom: #839bb3 1px solid;
+    background: url('../images/sectionheader.gif') top repeat-x;
+    padding: .1em 3.5em .1em;
+    vertical-align:middle;
+    text-align: center;
+}
+
+/*Tracker#: 22852 CREATE VIEW OF SALES ORDER SCREEN
+Style classes for sales order screen. - start
+*/
+.labelSO   
+{
+    white-space: nowrap;
+    width: 93px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:block;
+}
+.labelSODtl   
+{
+    white-space: nowrap;
+    width: 61px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:block;
+    float:left;
+}
+.labelSODtlSmtTag   
+{
+    white-space: nowrap;
+    width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:block;
+}
+.labelSOSDtl   
+{
+    white-space: nowrap;
+    width: 53px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:block;
+}
+.labelSODesc  
+{
+    white-space: nowrap;
+    width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:block;
+}
+.labelSODescSDtl
+{
+    white-space: nowrap;
+    width: 107px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:block;
+}
+.labelSOQty   
+{
+    white-space: nowrap;
+    width: 95px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:block;
+}
+/*Style classes for sales order screen. - end*/

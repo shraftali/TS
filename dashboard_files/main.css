@@ -1,0 +1,309 @@
+/*
+ * ***********************************
+ *   Copyright  (C)  2002 - 2011
+ *            by
+ *   TradeStone Software, Inc.
+ *   Gloucester, MA. 01930
+ *   All Rights Reserved
+ *   Printed in U.S.A.
+ *   Confidential, Unpublished
+ *   Property of
+ *   TradeStone Software, Inc.
+ * ***********************************
+ */
+
+#admin {
+    text-align: right;
+    vertical-align: top;
+}
+
+#head {
+    width: 100%;
+}
+
+.array-field {
+    border: 2px solid #474747;
+    background: #59C1A9;
+    padding: 5px;
+    margin: 5px;
+}
+
+.array-field-list li {
+    list-style: circle;
+    margin-left: 20px;
+}
+
+.navigators {
+    padding-left: 5px;
+    border-left: 1px solid #CCCCCC;
+}
+
+.navigators .navTitle {
+    padding-bottom: 2px;
+}
+
+.navigators h2 h4 {
+    background: #85A8C4;
+    border: 1px solid #ce9d77;
+}
+
+.navigators h5 h4 h2 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.navigators ul {
+    list-style: none;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 5px;
+    list-style-position :outside;    
+}
+
+.navigators  li {
+    color: #999;
+    padding: 1px;
+    text-transform: capitalize;
+    font-size: 9pt;
+}
+
+.facet-field {
+    font-weight: bold;
+}
+
+.highlight {
+    color: white;
+    background-color: gray;
+    border: 1px black solid;
+}
+
+.highlight-box {
+    margin-left: 15px;
+}
+
+.field-name {
+    font-weight: bold;
+}
+
+.highlighted-facet-field {
+    background: white;
+}
+
+.constraints {
+    margin-top: 10px;
+}
+
+.query-box, .constraints {
+    padding: 5px;
+    margin: 5px;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.query-box a {
+    color: #36b;
+    margin-top: 2px;
+    padding-top: 2px;
+}
+
+.query-boost {
+    top: 10px;
+    left: 50px;
+    position: relative;
+    font-size: 0.8em;
+}
+
+.query-box .inputs {
+    left: 180px;
+    position: relative;
+}
+
+#logo {
+    margin: 10px;
+    border-style: none;
+}
+
+.pagination {
+    padding-left: 33%;
+    background: #eee;
+    margin: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.result-document {
+    border: 1px solid #999;
+    padding: 5px;
+    margin-left: 210px;
+    margin-bottom: 15px;
+}
+
+.result-document div {
+    padding: 5px;
+}
+
+.result-title {
+    width: 60%;
+}
+
+.result-document:nth-child(2n+1) {
+    background-color: #eee;
+}
+
+.selected-facet-field {
+    font-weight: bold;
+}
+
+li.show {
+    list-style: disc;
+}
+
+.group-value {
+    font-weight: bold;
+}
+
+.searchfilters ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+    display: inline;
+}
+
+.searchfilters li {
+    color: #36b;
+    display: inline;
+    padding: 0px 10px 5px 5px;
+    margin-right: 5px;
+    background: url(../../images/close_med.gif) no-repeat top right;
+    cursor: pointer;
+    
+}
+
+/**.navSubTitle {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.navTitle {
+    font-size: 13px;
+    font-weight: bold;
+}  */
+
+.navTitleSearch {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.accordionNoAnimate ul {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-left:2px;
+}
+
+.accordionNoAnimate .range {
+    padding-bottom: 10px;
+}
+
+#advancedSearchDiv {
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    background: #fff;
+    width: 665px;
+}
+
+#productsInfo a {
+     color: #36b;
+     font-size : 7.5 pt;
+}
+
+.mediaCont {
+    border: 1px solid #000;
+    padding: 5px;
+    background: #fff;
+}
+
+.mediaCont img {
+    padding:2px;
+}
+.video {
+    display:block;
+}
+.audio {
+    display:block;
+}
+.listItemDescription 
+{
+	font-size : 7.5 pt;
+}
+.listItemDescription A 
+{
+	font-size : 7.5 pt;
+}
+.listItemDescription span
+{
+	color: #666666;
+}
+
+.listItemDescriptionEllipse 
+{
+	font-size : 7.5 pt;
+	white-space: nowrap;	
+	text-overflow: ellipsis; 
+	overflow: hidden;
+	vertical-align:middle;
+	display:block;
+}
+
+.listlabelEllipse 
+{	
+	font-size : 8pt;
+	white-space: nowrap;	
+	text-overflow: ellipsis; 
+	overflow: hidden;
+	vertical-align:middle;
+	display:block;
+	color: #666666;
+}
+
+.btnEllipse 
+{	
+	font-size : 7.5pt;
+	white-space: nowrap;	
+	text-overflow: ellipsis; 
+	overflow: hidden;
+	vertical-align:middle;
+}
+
+.titleContent {   
+    padding: 5px;
+    background: #fff;
+    font-size : 6.5 pt;
+}
+
+.titleContent table{   
+  border: 1px #00F;
+   background: #d6d6d6;
+}
+
+.titleContent td{  
+	 background: #ffffff;
+   	 padding 1px;
+}
+.titleContent th{  
+	font-size : 7.9 pt;  
+   background: #bdd3ff;
+}
+
+	
+#refreshlist
+{
+ font-size:9.5px; 
+ font-family:verdana; 
+ border-bottom:1px solid rgb(11, 77, 18)		
+}
+
+
+

@@ -8960,10 +8960,10 @@ textarea.k-textbox:hover,
 .k-panelbar .k-tabstrip-items .k-item,
 .km-pane-wrapper > .km-pane > .km-view > .km-content {
   background-image: url('textures/highlight.png');
-  background-image: none, -webkit-linear-gradient(top, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 100%);
-  background-image: none, -moz-linear-gradient(top, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 100%);
-  background-image: none, -o-linear-gradient(top, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 100%);
-  background-image: none, linear-gradient(to bottom, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 100%);
+  background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, 0.45098) 0px, rgba(255, 255, 255, 0) 100%);
+  background-image: none, -moz-linear-gradient(top, rgba(255, 255, 255, 0.45098) 0px, rgba(255, 255, 255, 0) 100%);
+  background-image: none, -o-linear-gradient(top, rgba(255, 255, 255, 0.45098) 0px, rgba(255, 255, 255, 0) 100%);
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.45098) 0px, rgba(255, 255, 255, 0) 100%);
   background-position: 50% 50%;
   background-color: #f3f3f4;
 }
@@ -9173,10 +9173,10 @@ html .km-pane-wrapper .k-header {
   border-color: #dbdbde;
   background-color: #f3f3f4;
   background-image: url('textures/highlight.png');
-  background-image: none, -webkit-linear-gradient(top, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 100%);
-  background-image: none, -moz-linear-gradient(top, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 100%);
-  background-image: none, -o-linear-gradient(top, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 100%);
-  background-image: none, linear-gradient(to bottom, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 100%);
+  background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, 0.45098) 0px, rgba(255, 255, 255, 0) 100%);
+  background-image: none, -moz-linear-gradient(top, rgba(255, 255, 255, 0.45098) 0px, rgba(255, 255, 255, 0) 100%);
+  background-image: none, -o-linear-gradient(top, rgba(255, 255, 255, 0.45098) 0px, rgba(255, 255, 255, 0) 100%);
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.45098) 0px, rgba(255, 255, 255, 0) 100%);
 }
 .k-button:focus:not(.k-state-disabled):not([disabled]) {
   -webkit-box-shadow: inset 0 0 6px 0 #b6bdca;
@@ -10040,10 +10040,10 @@ html .km-pane-wrapper .km-widget,
 .k-numeric-wrap.k-state-default,
 .k-dropdown-wrap.k-state-default {
   background-image: url('textures/highlight.png');
-  background-image: none, -webkit-linear-gradient(top, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 100%);
-  background-image: none, -moz-linear-gradient(top, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 100%);
-  background-image: none, -o-linear-gradient(top, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 100%);
-  background-image: none, linear-gradient(to bottom, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 100%);
+  background-image: none, -webkit-linear-gradient(top, rgba(255, 255, 255, 0.45098) 0px, rgba(255, 255, 255, 0) 100%);
+  background-image: none, -moz-linear-gradient(top, rgba(255, 255, 255, 0.45098) 0px, rgba(255, 255, 255, 0) 100%);
+  background-image: none, -o-linear-gradient(top, rgba(255, 255, 255, 0.45098) 0px, rgba(255, 255, 255, 0) 100%);
+  background-image: none, linear-gradient(to bottom, rgba(255, 255, 255, 0.45098) 0px, rgba(255, 255, 255, 0) 100%);
   background-position: 50% 50%;
   background-color: #f3f3f4;
   border-color: #dbdbde;

@@ -57,8 +57,8 @@ $(document).ready( function() {
                 field: "Company", width: 90, locked:false, filterable: true, sortable: true
             }
         ]
-
     });
+    
     //Overiding Grid Default functinality on Some Clumns
     var gridData = grid.data("kendoGrid");
 
@@ -103,33 +103,32 @@ $(document).ready( function() {
 
     // Validation for SaveMyView Dialog Form
     var validateSaveMyView = $("#myViewForm").kendoValidator().data("kendoValidator");
-    //status = $(".status");
     var myViewForm = $("#myViewForm")
-    myViewForm.submit(function(event) {
-        event.preventDefault();
-        if (validateSaveMyView.validate()) {
-        //Make call here to the function that will save the layout to the Backend
-        /*var state = {
-        columns: grid.columns,
-        page: dataSource.page(),
-        pageSize: dataSource.pageSize(),
-        sort: dataSource.sort(),
-        filter: dataSource.filter(),
-        group: dataSource.group()
-        };
+        myViewForm.submit(function(event) {
+            event.preventDefault();
+            if (validateSaveMyView.validate()) {
+            //Make call here to the function that will save the layout to the Backend
+            /*var state = {
+            columns: grid.columns,
+            page: dataSource.page(),
+            pageSize: dataSource.pageSize(),
+            sort: dataSource.sort(),
+            filter: dataSource.filter(),
+            group: dataSource.group()
+            };
 
-        $.ajax({
-        url: "/Home/Save",
-        data: {
-        data: JSON.stringify(state)
+            $.ajax({
+            url: "/Home/Save",
+            data: {
+            data: JSON.stringify(state)
+            }
+            });*/
+
+            //Temp options saving it in local data
+            localStorage["kendo-grid-options"] = kendo.stringify(gridData.getOptions());
+            alert("Your My View has been Saved");
+            dialog.close();
         }
-        });*/
-
-        //Temp options saving it in local data
-        localStorage["kendo-grid-options"] = kendo.stringify(gridData.getOptions());
-        alert("Your My View has been Saved");
-        dialog.close();
-    }
     });            
 
     $(".cancel", myViewForm).click(function(event) {
@@ -138,68 +137,83 @@ $(document).ready( function() {
     });
 
     //Delete View
-    $("#deleteMyView").kendoWindow();
-    var dialogDeleteView = $("#deleteMyView").data("kendoWindow");
+    var deleteMyView = $("#deleteMyView");
+    deleteMyView .kendoWindow();
+    var dialogDeleteView = deleteMyView.data("kendoWindow");
     dialogDeleteView.setOptions({
         visible: false,
         modal: true,
         title: "Delete Views",
         width: 600
     });
-    $("#chooseLayout").change(function (e) {
-        var selectView = $(this).val();
-    //console.log(selectView);
-    if (selectView == "delete") {
-        dialogDeleteView.center().open();
-    }
-    else{
-    //Loading my View When user choose his view form dropdown menu
-    //Server Side
-    /*$.ajax({
-    url: "/Home/Load",
-    success: function(state) {
-    state = JSON.parse(state);
-
-    var options = grid.options;
-
-    options.columns = state.columns;
-
-    options.dataSource.page = state.page;
-    options.dataSource.pageSize = state.pageSize;
-    options.dataSource.sort = state.sort;
-    options.dataSource.filter = state.filter;
-    options.dataSource.group = state.group;
-
-    grid.destroy();
-
-    $("#grid")
-    .empty()
-    .kendoGrid(options);
-    }
-    });*/
-    //Local temp Solution
-    var options = localStorage["kendo-grid-options"];
-        if (options) {
-            gridData.setOptions(JSON.parse(options));
+    var chooseLayout = $('#chooseLayout');
+        chooseLayout.change(function (e) {
+            var selectView = $(this).val();
+        //console.log(selectView);
+        if (selectView == "delete") {
+            dialogDeleteView.center().open();
         }
-    }
-    return false;   
-    });
+        else{
+        //Loading my View When user choose his view form dropdown menu
+        //Server Side
+        /*$.ajax({
+        url: "/Home/Load",
+        success: function(state) {
+        state = JSON.parse(state);
 
+        var options = grid.options;
+
+        options.columns = state.columns;
+
+        options.dataSource.page = state.page;
+        options.dataSource.pageSize = state.pageSize;
+        options.dataSource.sort = state.sort;
+        options.dataSource.filter = state.filter;
+        options.dataSource.group = state.group;
+
+        grid.destroy();
+
+        $("#grid")
+        .empty()
+        .kendoGrid(options);
+        }
+        });*/
+        //Local temp Solution
+        var options = localStorage["kendo-grid-options"];
+            if (options) {
+                gridData.setOptions(JSON.parse(options));
+            }
+        }
+        return false;   
+        });
+
+    //Handle show hide Error
+        statusMsg = $(".err-wrap");
+    function delete_err (argument) {
+        if(argument == false){
+            $(statusMsg, deleteMyView).html('Check atleast one checkbox to delete your save View').css('display', 'block');    
+        }
+        if (argument == true) {
+            $(statusMsg, deleteMyView).html('').css('display', 'none');
+        };
+        
+    }
     // Validation for DeleteMyView Dialog Form
-    $('#deleteMyView').submit(function(e){
-        if($('#deleteMyView').find(':checked').length<1){
-            $(".err-wrap").html('Check atleast one checkbox to delete your save View').css('display', 'block');
+    deleteMyView.submit(function(e){
+        if(deleteMyView.find(':checked').length<1){
+            delete_err(false);
             return false;
           }
         if(!confirm('Deleting this view will also make it unavailable from the Dashboard OK/Cancel')){
-            $(".err-wrap").html('').css('display', 'none');
+            delete_err(true);
             return false;
         };
     })
-    $(".cancel").click(function(event) {
+    //Handel Cancel Event
+    $(".cancel", deletemyViewForm).click(function(event) {
         dialogDeleteView.close();
-        $('#chooseLayout').val(0);
+        delete_err(true);
+        chooseLayout.val(0);
     });
 
 });

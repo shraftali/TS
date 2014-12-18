@@ -16,7 +16,7 @@
 @inverse-text-color: #fff;
 @widget-gradient: "rgba(255, 255, 255, 0.45098) 0px, rgba(255, 255, 255, 0) 100%";
 @widget-background-color: #fff;
-@widget-border-color: #dbdbde;
+@widget-border-color: #7ba1c6;
 @widget-shadow: none;
 
 /* Selects, Dropdowns */
@@ -33,9 +33,9 @@
 @link-text-color: @widget-text-color;
 
 /* Headers */
-// @header-text-color: @widget-text-color;
-@header-text-color: #316b9d;
-@header-background-color: #f3f3f4;
+@header-text-color: @widget-text-color;
+// @header-text-color: #316b9d;
+@header-background-color: #d1e2f0;
 
 /* Buttons */
 @button-text-color: #363636;
@@ -54,19 +54,21 @@
 
 /* Hover State */
 // @hover-text-color: #263248;
-@hover-text-color: #316b9d;
+@hover-text-color: @widget-text-color;
 // @hover-gradient: "rgba(255,255,255,.3) 0%, rgba(255,255,255,0) 100%";
 @hover-gradient: none;
 // @hover-background-color: #b6bdca;
-@hover-background-color: #d5e8f8;
-@hover-border-color: @hover-background-color;
+@hover-background-color: #d1e2f0;
+// @hover-border-color: @hover-background-color;
+@hover-border-color: #3a5c93;
+
 @hover-shadow: none;
 
 /* Selected State */
 @selected-text-color: #fff;
 // @selected-gradient: "rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%";
 @selected-gradient: none;
-@selected-background-color: #909091;
+@selected-background-color: #3a5c93;
 @selected-border-color: @selected-background-color;
 @selected-shadow: none;
 
@@ -77,8 +79,7 @@
 @focused-active-item-shadow: inset 0 0 15px 5px darken(@selected-border-color, 8%);
 
 /* Active State */
-// @active-text-color: @widget-text-color;
-@active-text-color: #316b9d;
+@active-text-color: @widget-text-color;
 @active-gradient:  none;
 @active-background-color: #d5e8f8;
 @active-border-color: #d5e8f8;
@@ -130,7 +131,7 @@
 @draghandle-hover-shadow: none;
 
 /* Grid */
-@alt-background-color: #f9f9f9;
+@alt-background-color: #f6f9fc;
 @nested-alt-background-color: darken(@alt-background-color, 8%);
 @cell-border-color: #dbdbde;
 @column-highlight-background-color: #fbfbfb;

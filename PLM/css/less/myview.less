@@ -1,5 +1,7 @@
-#grid-wrap{
+#list, #grid-wrap{
 	height: 100%;
+}
+#grid-wrap{
 	.k-grid-header{
 		th.disabledColumn{
 			/*background: #f66;*/
@@ -10,16 +12,23 @@
 			display:none;
 		}
 	}
-	//styling KENDO for TS starts here
-	.k-header{
-		font-weight: bold; 
-	}
-	input[type="radio"]{
-		margin-right: 20px;
-	}
+	
 
 }
-
+.k-column-menu > .k-header {
+  background-color: #fff;
+}
+.k-column-menu{
+	.k-separator{
+	  border-color:#fff; 
+	}
+	input[type="checkbox"]{
+		margin-right: 8px;
+	}
+	.k-item > .k-link{
+		line-height: 1.8em
+	}
+} 
 
 /* hide column menu arrow */
 
@@ -27,6 +36,10 @@
 .k-window-titlebar{
 	font-family: 'Trebuchet MS', Verdana;
 	font-size: 1em;
+
+	.k-window-title{
+		padding-left: 12px;
+	}
 }
 
 

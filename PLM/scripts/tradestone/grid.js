@@ -1,12 +1,12 @@
 $(document).ready( function() {
     // Grid Initialization
     var grid = $("#grid");
+
     grid.kendoGrid({
         reorderable: true,
         resizable: true,
         columnMenu: true,
         navigatable: true,
-        height: 230,
         filterable: {
             extra: false,
             operators: {
@@ -215,5 +215,28 @@ $(document).ready( function() {
         delete_err(true);
         chooseLayout.val(0);
     });
+
+    function resizeGrid() {
+        var gridWrap = $("#grid-wrap");
+        var gridContainer = $(".k-grid" , gridWrap);
+        var dataArea1 = gridContainer.find(".k-grid-content");
+        var dataArea2 = gridContainer.find(".k-grid-content-locked");
+        
+        // Offsets may vary based on your applications layout e.g header and footer heights
+
+        var newGridHeight = $(document).height() - 250;
+        var newDataAreaHeight = newGridHeight - 65;
+        
+        gridContainer.height(newDataAreaHeight);
+        dataArea1.height(newDataAreaHeight);
+        dataArea1.height(newDataAreaHeight);
+
+        $("#grid").data("kendoGrid").refresh();
+    }
+    
+    $(window).resize(function () {
+        resizeGrid();
+    });
+
 
 });

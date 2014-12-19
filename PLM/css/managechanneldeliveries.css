@@ -1,0 +1,384 @@
+/* style class for select box in search list*/
+ .clsSelectItem
+{
+	border: #bdd3ff 1px solid;    
+  height:12px;
+  margin: 0px 0px 0px 0px;
+}
+.clsAnchorDefault
+{
+    text-decoration:none;
+}
+/* style class for search list label */
+.tblsearchheader
+{
+  font-weight:bold;
+  border-bottom:#000 1px solid;
+}
+/* style class for search list item image */
+.img_goods
+{
+  width: 30px;
+  height: 40px;
+}
+
+.mangDiv
+{
+	height:320px;	
+	width:1050px;
+	overflow-y: scroll;
+	overflow-x: auto;
+}
+/* style class for search list body lines */
+.tblBodylist
+{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: Arial, Verdana, sans-serif;
+  color: #4D6185;
+  border-left: #ccc 1px solid;
+	border-right: #ccc 1px solid;
+  border-bottom:#000 1px solid;
+}
+.clshovertotalqty
+{
+  background-image: url('../img/hovertag.gif');
+  width: 11px;
+  height: 11px;
+}
+.clspassiv
+{
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+.colorsdiv
+{
+  width: 14px;
+  height: 14px;
+  float: left;
+  border-right: 2px solid #ffffff;
+}
+.colorsdivinf
+{
+  width: 30px;
+  height: 30px;
+}
+.clsinpclr
+{
+  width: 40px;
+  text-align: right;
+  border-color: #35acca; 
+}
+.clsinpmng
+{
+  width: 60px;
+  text-align: right;
+  border-color: #35acca; 
+}
+.clsclrentertitle
+{
+  font-size: 14px;
+}
+.clsclrenterheader
+{
+  font-family: Verdana;
+  color: #4D6185;
+  vertical-align: top; 
+}
+.clsbtnstatus
+{
+  background-color: #EEEEEE;
+  border: 1px solid #BBBBBB;
+
+  /* Firefox v1.0+ */
+  -moz-border-radius:6px;
+  /* Safari v3.0+ and by Chrome v0.2+ */
+  -webkit-border-radius:6px;
+  /* Firefox v4.0+ , Safari v5.0+ , Chrome v4.0+ , Opera v10.5+  and by IE v9.0+ */
+  border-radius:6px;
+
+}
+.clsbtnclose
+{
+ background-color: #FFFFFF; 
+ border: 1px solid #FFFFFF;
+}
+.clsactualqty
+{
+  background-color: #eee;
+  font-weight:bold;
+  width: 100px;
+}
+.clschanelrow
+{
+  background-color: #CCC;
+  border-bottom: solid 1px #fff;
+  border-right: solid 1px #ooo;
+}
+.clsstoretype
+{
+  background-color: #DDD;
+  border-bottom: solid 1px #D6D6D6;
+  border-right: solid 1px #999;
+  text-align: center;
+}
+.clstotalline
+{
+  background-color: #eee;
+  font-weight:bold;
+  border-bottom: 1px solid #000;
+  border-right: #ccc 1px solid;
+}
+.clsdeliveries
+{
+  background-color: #ffffff;
+  width: 72px;
+  border-bottom: 1px solid #999;
+  border-right: #D6D6D6 1px solid;
+}
+.clsmnggrid
+{
+  border: #D6D6D6 1px solid;
+}
+.clsmnggridb
+{
+  border-bottom: #000 1px solid;
+}
+.clsmnggridtop
+{
+  border: #FFFFFF 1px solid;
+}
+.clschanelsrow
+{
+  width: 150px;
+  border-right: #999 1px solid;
+  border-bottom: 1px solid #D6D6D6;
+  font-weight: bold;
+}
+.clschanelsrowclr
+{
+  width: 150px;
+  border-right: #999 1px solid;
+  border-bottom: 1px solid #D6D6D6;
+}
+.clsplaneid
+{
+  border-bottom: solid 1px #999;
+  border-right: solid 1px #999;
+  font-weight: bold;
+}
+.clssummaryrow
+{
+  background-color: #BBB;
+  font-weight: bold; 
+  border-right: #999 1px solid;
+  border-bottom: 1px solid #D6D6D6;
+}
+.clssummary
+{
+  background-color: #BBB;
+  font-weight: bold; 
+  border-right: #999 1px solid;
+  border-bottom: 1px solid #999;
+}
+.clstotalright
+{
+  background-color: #DDD;
+  border-bottom: solid 1px #999;
+  border-right: solid 1px #D6D6D6;
+  text-align: center;
+  width: 72px;
+}
+.clstblcontainer
+{
+  width: inherit;
+  scrollbar-face-color: #BBB;
+  overflow-x: scroll;
+}
+.clsgo
+{
+  width: 20px;
+  background-color: #DDD;
+  /*background-image: url("../img/hidden.jpg");*/
+}
+.clschecksign
+{
+  width: 10px;
+  height: 9px;
+  margin-left: 10px;
+  background-image: url("../img/quantity-checkmark.gif");
+  background-repeat: no-repeat;
+}
+.clsbtnbottom
+{
+  font-family:Verdana;
+  font-size:12px;
+
+  border: 1px solid #BBB;
+
+  /* Firefox v3.6+ */
+  background-image:-moz-linear-gradient(50% 0% -90deg,rgb(238,238,238) 0%,rgb(204,204,204) 100%); 
+  /* safari v4.0+ and by Chrome v3.0+ */
+  background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(238,238,238)),color-stop(1, rgb(204,204,204)));
+  /* Chrome v10.0+ and by safari nightly build*/
+  background-image:-webkit-linear-gradient(-90deg,rgb(238,238,238) 0%,rgb(204,204,204) 100%);
+  /* Opera v11.10+ */
+  background-image:-o-linear-gradient(-90deg,rgb(238,238,238) 0%,rgb(204,204,204) 100%);
+  /* IE v10+ */
+  background-image:-ms-linear-gradient(-90deg,rgb(238,238,238) 0%,rgb(204,204,204) 100%);
+  background-image:linear-gradient(180deg, rgb(238,238,238) 0%, rgb(204,204,204) 100%);
+
+  /* Firefox v1.0+ */
+  -moz-border-radius:5px;
+  /* Safari v3.0+ and by Chrome v0.2+ */
+  -webkit-border-radius:5px;
+  /* Firefox v4.0+ , Safari v5.0+ , Chrome v4.0+ , Opera v10.5+  and by IE v9.0+ */
+  border-radius:5px;
+  border-style:solid;
+  -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffeeeeee, endColorstr=#ffcccccc, GradientType=0)";
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffeeeeee, endColorstr=#ffcccccc, GradientType=0);
+  height: 26px;
+}
+/* Modal window */
+.clsmodalpanel
+{
+  background-color:#FFFFFF;
+  border: 1px solid #AAAAAA;
+
+  /* Firefox v1.0+ */
+  -moz-border-radius:10px;
+  /* Safari v3.0+ and by Chrome v0.2+ */
+  -webkit-border-radius:10px;
+  /* Firefox v4.0+ , Safari v5.0+ , Chrome v4.0+ , Opera v10.5+  and by IE v9.0+ */
+  border-radius:10px;
+
+  /* Firefox v3.5+ */
+  -moz-box-shadow:0px 5px 16px rgba(0,0,0,0.2);
+  /* Safari v3.0+ and by Chrome v0.2+ */
+  -webkit-box-shadow:0px 5px 16px rgba(0,0,0,0.2);
+  /* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
+  box-shadow:0px 5px 16px rgba(0,0,0,0.2);
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=5, Color=#33000000, Positive=true)";
+  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=5, Color=#33000000, Positive=true);
+  
+  padding: 20 20 20 20;
+  z-index: 9990;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.clspadding
+{
+  background-color:#FFFFFF;
+  border: solid 20px #ffffff;
+   /* Firefox v1.0+ */
+  -moz-border-radius:10px;
+  /* Safari v3.0+ and by Chrome v0.2+ */
+  -webkit-border-radius:10px;
+  /* Firefox v4.0+ , Safari v5.0+ , Chrome v4.0+ , Opera v10.5+  and by IE v9.0+ */
+  border-radius:10px;
+}
+.cover-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  border: 1px solid gray;
+  padding: 1px 1px 1px 1px;
+}
+/* Hover Popups */
+.clspopupinf
+{
+  background-color: #FFFFFF;
+  border: 1px solid #AAAAAA;
+
+  /* Firefox v1.0+ */
+  -moz-border-radius:5px;
+  /* Safari v3.0+ and by Chrome v0.2+ */
+  -webkit-border-radius:5px;
+  /* Firefox v4.0+ , Safari v5.0+ , Chrome v4.0+ , Opera v10.5+  and by IE v9.0+ */
+  border-radius:5px;
+
+  /* Firefox v3.5+ */
+  -moz-box-shadow:0px 5px 16px rgba(0,0,0,0.2);
+  /* Safari v3.0+ and by Chrome v0.2+ */
+  -webkit-box-shadow:0px 5px 16px rgba(0,0,0,0.2);
+  /* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
+  box-shadow:0px 5px 16px rgba(0,0,0,0.2);
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=5, Color=#33000000, Positive=true)";
+  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=5, Color=#33000000, Positive=true);
+  font-family: TradeStone;
+  font-size: 9pt;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+  padding: 10px 10px 10px 10px;
+}
+/* Color information popup */
+.clspopupcolorinf
+{
+  text-align: left;
+}
+.clspopupquantity
+{
+  text-align: left;
+}
+/* select channels panel */
+.clsselectchannels
+{
+  background-color: #FFFFFF;
+  border: 1px solid #AAAAAA;
+
+  /* Firefox v1.0+ */
+  -moz-border-radius:5px;
+  /* Safari v3.0+ and by Chrome v0.2+ */
+  -webkit-border-radius:5px;
+  /* Firefox v4.0+ , Safari v5.0+ , Chrome v4.0+ , Opera v10.5+  and by IE v9.0+ */
+  border-radius:5px;
+
+  /* Firefox v3.5+ */
+  -moz-box-shadow:0px 5px 16px rgba(0,0,0,0.2);
+  /* Safari v3.0+ and by Chrome v0.2+ */
+  -webkit-box-shadow:0px 5px 16px rgba(0,0,0,0.2);
+  /* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
+  box-shadow:0px 5px 16px rgba(0,0,0,0.2);
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=5, Color=#33000000, Positive=true)";
+  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=5, Color=#33000000, Positive=true);
+  padding: 20 20 20 20;
+  width: 100px;
+  z-index: 9990;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+ 
+}
+/* fields colors with status of DROPPED */
+.clsdropped
+{
+  background-color: #FFBFBF;
+}
+/* fields code colors with status of DROPPED */
+.clsdroppedcode
+{
+  background-color: #888;
+}
+/* use to selects the column or row */
+.clstblelselect
+{
+  background-color: #87CEEB;
+}
+
+ .clsBrdMngTable
+ {
+ 	font-family:Verdana;
+   
+ }

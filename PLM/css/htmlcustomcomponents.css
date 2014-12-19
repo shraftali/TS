@@ -1,0 +1,38 @@
+/*************************************/
+/*  Copyright  (C)  2002 - 2009      */
+/*           by                      */
+/*  TradeStone Software, Inc.        */
+/*  Gloucester, MA. 01930            */
+/*  All Rights Reserved              */
+/*  Printed in U.S.A.                */
+/*  Confidential, Unpublished        */
+/*  Property of                      */
+/*  TradeStone Software, Inc.        */
+/*************************************/
+.clsNavigatorViewer
+{
+	top: 0px;
+	left: 0px;
+	width: 164px;
+	height: 520px;
+	padding-left: 0px;
+}
+
+.clsNavigatorView
+{
+	width: 164px;
+	margin-bottom: 3px
+}
+
+.clsNavigatorHeaderView
+{
+	font-size: 12pt;
+	background-color: #5B85AB;
+	height: 25px;
+}
+
+.clsNavigatorBodyView
+{
+	background-color: #C5D7E5;
+	height: 408px;
+}

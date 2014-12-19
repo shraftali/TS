@@ -1,0 +1,79 @@
+/*************************************/
+/*  Copyright  (C)  2002 - 2009      */
+/*           by                      */
+/*  TradeStone Software, Inc.    */
+/*  Gloucester, MA. 01930            */
+/*  All Rights Reserved              */
+/*  Printed in U.S.A.                */
+/*  Confidential, Unpublished        */
+/*  Property of                      */
+/*  TradeStone Software, Inc.    */
+/*************************************/
+/*
+    Has Overridden styles to have the same look-n-feel as per PLM guidelines that are used in the ToolSet screens
+*/
+
+
+#tabletTS
+{
+	background:#D4DCE5;
+	height:20px;
+	font-weight:bold;
+	font-size: 9pt;	
+}
+
+.dtltTS
+{
+	background: #D4DCE5;
+	color:#000;
+	font-weight:bold;
+}
+
+#thstyle
+{
+	background:#D4DCE5;
+	height:20px;
+	font-weight:bold;
+	font-size:12px
+}
+
+.divstyle
+{
+	visibility: hidden;
+	width:757px;
+}
+
+.innerTable
+{
+	border: 1px solid #317CC8;	
+}
+
+
+SELECT.tableFields
+{
+    border: #bdd3ff 1px solid;
+    font-size: 7.5pt;
+    color: #000;
+    width:340px;
+}
+
+.shadedRow
+{ 
+	background: #CADDFF;
+} 
+
+.rowBorder
+{
+	border-top: 1px solid #d6d6d6;
+	border-bottom: 1px solid #d6d6d6;
+}
+/* tracker#24095 - a, a:hover styles for admin navigation to remove the underline and the blue color while on mouse over*/
+a
+{
+	text-decoration: none;	
+}
+a:hover
+{
+	color:#009C5B;
+	text-decoration: underline;
+}

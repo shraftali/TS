@@ -1,0 +1,97 @@
+/*************************************/
+/*  Copyright  (C)  2002 - 2013      */
+/*           by                      */
+/*  TradeStone Software, Inc.        */
+/*  Gloucester, MA. 01930            */
+/*  All rights Reserved              */
+/*  Printed in U.S.A.                */
+/*  Confidential, Unpublished        */
+/*  Property of                      */
+/*  TradeStone Software, Inc.        */
+/*************************************/
+
+#LOCK
+{
+	overflow: hidden !important;
+}
+
+#leftDiv
+{
+	position: relative; /* allow children to use positioning */
+	height: 100%;
+	width: 50%;
+}
+
+#TITLE_TABLE, #DATA_TABLE
+{
+	width: 100%;
+}
+
+#T0, #D0
+{
+	width: 24px;
+}
+
+#TITLE_TABLE input, #DATA_TABLE input
+{
+	display: block;
+	margin: 0 auto;
+}
+
+#T2, #D2
+{
+	width: 105px;
+}
+
+#DATA_DIV
+{
+	margin-top: 24px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	overflow: auto;
+	background:#FFF;
+}
+
+#DATA_DIV div
+{
+	position: relative; /* allow children to use positioning */
+}
+
+#subjectDiv
+{
+	padding-right: 15px;
+}
+
+.detailsLink
+{
+	position: absolute !important;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	height: 12px;
+	width: 11px;
+	background: url("../images/changetracking.gif") no-repeat scroll left top transparent;
+}
+
+
+#messageDetailsDiv
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 50%;
+	overflow: auto;
+	vertical-align: text-top;
+	margin-top: 20px;
+	border-top: 1px solid black;
+	background: #FFF;
+}
+
+#messageSubject
+{
+	font-weight: 800;
+	margin-bottom: 15px;
+}

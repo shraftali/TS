@@ -1,7 +1,8 @@
-#list, #grid-wrap{
+#LIST, #grid-wrap{
 	height: 100%;
 }
 #grid-wrap{
+	padding: 5px 10px 0 10px;
 	.k-grid-header{
 		th.disabledColumn{
 			/*background: #f66;*/
@@ -28,8 +29,21 @@
 	.k-item > .k-link{
 		line-height: 1.8em
 	}
-} 
+}
 
+.k-grid-content:before, .k-grid-header-wrap:before{
+	height: inherit;
+	position: fixed;
+	content: '';
+	width: 20px;
+	box-shadow: inset 8px 0px 12px 0px rgba(0, 0, 0, 0.15);
+	background-color: transparent;
+	margin-top: 0px;
+}
+
+.k-grid-header-wrap:before{
+	height: 28px;
+}
 /* hide column menu arrow */
 
 

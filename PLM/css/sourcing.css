@@ -1,0 +1,116 @@
+/*************************************/
+/*  Copyright  (C)  2002 - 2009      */
+/*           by                      */
+/*  TradeStone Software, Inc.    */
+/*  Gloucester, MA. 01930            */
+/*  All rights Reserved              */
+/*  Printed in U.S.A.                */
+/*  Confidential, Unpublished        */
+/*  Property of                      */
+/*  TradeStone Software, Inc.    */
+/*************************************/
+/*
+    Has Overridden styles to have the same look-n-feel as per PLM guidelines.
+*/
+
+#dsh TD,#sf
+{
+    padding:1px 5px 1px 5px;    
+}
+
+#sf    /**section field labels*/
+{
+    color: #000;
+    font-family: 'trebuchet ms', verdana;
+    font-size: 8pt;        
+}
+
+.clstitleTextSize9
+{
+	font-weight: bold;
+	font-size: 9pt;	
+	color: #999;
+}
+.clsDashBoardText
+{
+	font-weight: bold;
+	color: #5986AA;
+}
+
+a,a:hover 
+{
+	/*Tracker:20615 */
+	color:#00F;
+	text-decoration:underline
+}
+
+/*
+Tracker#13317 -overriding TD.tablet of global.css
+*/
+TD.tablet,#sh,#dst, #dsh
+{
+    font-size: 9pt;
+	color: black;
+	border-top: #b1c3d1 0px solid;
+	border-left: #a8bace 0px solid;
+	border-right: #b1c3d1 0px solid;
+	border-bottom: #839bb3 0px solid;	
+	height: 22px;
+	background: url('../images/sectionheader.gif') top repeat-x;    
+    padding: 1px 5px;
+}
+
+#sh,#dst, #dsh /**section hdr label, detail section label*/
+{
+    padding: 0px 5px 0px 10px;
+}
+
+
+TD.dtlt 
+{	
+	background: #fff;	
+	color: #000;
+	padding: 1px 5px;
+}
+	
+.clsDashBoardText
+{
+	font-weight: bold;
+	color: #5986AA;
+}
+
+#tablet
+{
+    padding:0px 0px 0px 5px;
+	font-size: 9pt;
+	font-family: 'trebuchet ms', verdana;	
+	color: #000;
+	border-top: #b1c3d1 1px solid;
+	border-left: #a8bace 1px solid;
+	border-right: #b1c3d1 1px solid;
+	border-bottom: #839bb3 1px solid;	
+	height: 22px;
+	background: #fff;        
+}
+
+/* Tracker#: 14907 - UI : COLUMNS NEED DIVIDERS ON SEARCH RESULT SCREENS  */
+#DATA_TABLE_SampleSel td
+{
+	padding: 1px 5px;
+}
+
+.noWrapTds td
+{
+    white-space: nowrap;
+}
+
+.noWrapTds textarea
+{
+    white-space: pre-wrap;
+}
+
+
+.noWrapTds font
+{
+	white-space: normal;
+}

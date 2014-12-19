@@ -1,0 +1,22 @@
+/*************************************/
+/*  Copyright  (C)  2002 - 2013      */
+/*           by                      */
+/*  TradeStone Software, Inc.        */
+/*  Gloucester, MA. 01930            */
+/*  All rights Reserved              */
+/*  Printed in U.S.A.                */
+/*  Confidential, Unpublished        */
+/*  Property of                      */
+/*  TradeStone Software, Inc.        */
+/*************************************/
+
+
+
+/* This CSS stylesheet defines styles used by required elements in a flex application page that supports browser history */
+
+#ie_historyFrame,#firefox_anchorDiv, #safari_formDiv, #safari_rememberDiv
+{ 
+	width: 0px;
+	height: 0px;
+	display:none 
+}

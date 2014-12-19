@@ -1,0 +1,36 @@
+/*************************************/
+/*  Copyright  (C)  2002 - 2009      */
+/*           by                      */
+/*  TradeStone Software, Inc.        */
+/*  Gloucester, MA. 01930            */
+/*  All Rights Reserved              */
+/*  Printed in U.S.A.                */
+/*  Confidential, Unpublished        */
+/*  Property of                      */
+/*  TradeStone Software, Inc.        */
+/*************************************/
+
+.branch
+{
+	display: block;
+	margin-top: 3px;
+	white-space: nowrap;
+}
+.leaf
+{
+	display: none;
+	margin-left: 16px;
+	margin-top: 3px;
+	white-space: nowrap;
+}
+
+label
+{
+	color: blue;
+}
+
+label:hover
+{
+	text-decoration: underline;
+	cursor: pointer;
+}

@@ -1,0 +1,94 @@
+/*************************************/
+/*  Copyright  (C)  2002 - 2010      */
+/*           by                      */
+/*  TradeStone Software, Inc.        */
+/*  Gloucester, MA. 01930            */
+/*  All Rights Reserved              */
+/*  Printed in U.S.A.                */
+/*  Confidential, Unpublished        */
+/*  Property of                      */
+/*  TradeStone Software, Inc.        */
+/*************************************/
+
+html, body 
+{
+	height: 100%;
+}
+/* have to override TR and TD so that the POM header sections behave similar to the PLM screens */
+.clspomsectionheader, .clspomsectionheader TR, .clspomsectionheader TD
+{
+	padding-left: 10px;
+	font-size: 9pt;
+	color: black;
+	border-top: #b1c3d1 0px solid;
+	border-left: #a8bace 0px solid;
+	border-right: #b1c3d1 0px solid;
+	border-bottom: #839bb3 0px solid;
+	height: 22px;
+	background: url('../images/sectionheader.gif') repeat-x top;
+}
+
+td, #sf, INPUT, SELECT, td.dsh, td.dtltvmiddle, td.dtlt
+{
+    color: #000;
+}
+
+#FLTR_OPEN TD, #FLTR_CLOSE TD
+{
+    background-color:#FFF;
+}
+
+td.dsh, td.dtltvmiddle, td.dtlt
+{
+	background-color: #fff;
+	font-size: 9pt;
+	font-weight:bold;
+	vertical-align:middle;
+}
+
+td.dtltvmiddle, td.dtlt
+{
+	border-bottom: 1px solid #000;
+}
+
+.dtht, #tablet
+{
+	border-top: #b1c3d1 1px solid;
+    border-left: #a8bace 1px solid;
+    border-right: #b1c3d1 1px solid;
+    border-bottom: #839bb3 1px solid;
+	font-size: 9pt;
+	color: black;
+	height: 22px;
+	background: url('../images/sectionheader.gif') repeat-x top;
+}
+
+#tablet
+{
+    padding-left: 10px;	
+    padding-bottom: 0px;
+}
+
+a:hover 
+{
+	text-decoration:underline 
+}
+
+.clsAnchorDefault
+{
+    text-decoration:none;
+}
+
+/* The style attributes defined is the same set of attributes as INPUT.clsTextNormal*/
+INPUT
+{
+    border: #bdd3ff 1px solid;
+    font-family: verdana
+}
+
+/* The style attributes defined is the same set of attributes as SELECT.clsSelectNormal - allow for multiple select option values */
+SELECT
+{
+    border: #bdd3ff 1px solid;
+    font-size: 7pt;
+}

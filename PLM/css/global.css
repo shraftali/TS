@@ -1,0 +1,365 @@
+/*************************************/
+/*  Copyright  (C)  2002 - 2008      */
+/*           by                      */
+/*  TradeStone Software, Inc.        */
+/*  Gloucester, MA. 01930            */
+/*  All Rights Reserved              */
+/*  Printed in U.S.A.                */
+/*  Confidential, Unpublished        */
+/*  Property of                      */
+/*  TradeStone Software, Inc.        */
+/*************************************/
+
+html, body
+{
+	margin: 0;
+	border: 0;
+	padding: 0;
+	overflow: hidden; /* hide disabled scrollbar in IE7 */
+}
+
+body 
+{
+  background: #fff;
+  color: #000;
+  font-family: verdana, helvetica, arial;
+  font-size: 12px;
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;  
+}
+input,select,textarea
+{
+	font-family:'Trebuchet MS', Verdana;
+	font-size:8pt;
+	vertical-align:top;
+}
+TABLE.grid TD 
+{
+	border-bottom:1px solid #CCC
+}
+
+td.blue 
+{
+	background:#069;
+	color:#FFF;
+	font-weight:bold;
+}
+td.green 
+{
+	background:#009C5B;
+	color:#FFF;
+	font-weight:bold;
+}
+td.tablet, td.dtlt
+{
+	background: #999;
+	color:#FFF;
+}
+
+#dst,.dst,#sh,#dsh     
+{
+	background: #FFF;
+	color:#000;
+	font-weight:bold;
+}
+/*Tracker:20615 - adding font family, to avoid font issue in request and Offer from Order detail */
+#sh, .dsh, td.dsh, #sf
+{
+	font-family:'Trebuchet MS', Verdana
+}
+
+#sh,#dsh,.dsh    
+{
+	border-bottom:1px solid #D6D6D6;	
+}
+
+.dsh    /**detail section label*/
+{
+	border-left:1px solid #D6D6D6;
+	background: #E7E7EF;
+	font-weight:bold;
+}
+td.dsh,#LDATA_TABLE td, #RDATA_TABLE td
+{
+	padding: 1px 5px;
+}
+
+#DATA_TABLE,#DATA_TABLE1,#DATA_TABLE2
+{
+	border-right:1px solid #D6D6D6;
+}
+
+#DATA_TABLE td,#DATA_TABLE1 td,#DATA_TABLE2 td
+{
+	color:#000000;
+	border-bottom:1px solid #D6D6D6;
+	border-left:1px solid #D6D6D6;
+	padding: 1px 5px;
+}
+
+.clsLogin
+{
+	font-size:12px;
+}
+td.leftbox,td.middlebox,td.rightbox 
+{
+	text-align:center;
+	font-size:10px;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
+	border-right: 0px none #fff;
+	color:#000;	
+}
+
+td.middlebox,td.rightbox 
+{
+	border-left: 0px none #fff;	
+}
+
+td.rightbox 
+{
+	border-right: 1px solid #000;	
+}
+
+td.chartcihdrcoltitle,td.chartcidtlcoltitle 
+{
+	text-align:center;
+	font-size:9px;
+	font-weight:bold;
+}
+
+td.chartcihdrdata,td.chartcidtldata 
+{
+	font-size:9px;
+}
+
+input.button
+{
+	font-size:12px;
+}
+
+input,select,textarea
+{
+	vertical-align:middle;
+}
+
+input[type="button"]
+{
+	vertical-align:top;
+}
+
+.inputtext
+{
+	border:0;
+	background:#EEE;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+.width100 {width:100px;}
+.width125 {width:125px;}
+.width150 {width:150px;}
+.width175 {width:175px;}
+.width200 {width:200px;}
+.width250 {width:250px;}
+.width260 {width:260px;}
+.widtd300 {width:300px;}
+.width400 {width:400px;}
+.width100b {width:100px;font-weight:bold;}
+.width125b {width:125px;font-weight:bold;}
+.width150b {width:150px;font-weight:bold;}
+.width175b {width:175px;font-weight:bold;}
+.width200b {width:200px;font-weight:bold;}
+.width300b {width:300px;font-weight:bold;}
+.width400b {width:400px;font-weight:bold;}
+
+#menubg,#mask
+{
+    background:#59C1A9;
+}
+
+
+
+#tablet, #dtlt
+{
+	background: #999;
+	color:#FFF;
+	font-weight:bold;
+}
+
+#blk
+{
+	background:#FFF;
+}
+
+
+#topg
+{
+	background:#009C5B;
+	height:20px;
+	font-size:15px;
+	color:#FFF;
+}
+
+#ntopg
+{
+	background:#EEE;
+	height:18px;
+	font-size:12px;
+	color:#000000;
+}
+
+#ntopt
+{
+	background:#EEE;
+	height:20px;
+	font-size:12px;
+	color:#979797;
+}
+
+#alertitle,#alertitlep
+{
+	background:#F00;
+	font-size:15px;
+	color:#FFF;
+	padding:0;
+	font-weight:bold;
+}
+
+#alertitlep
+{
+	font-size:13px;	
+}
+
+#alertblk
+{
+	background:#FFF;
+	padding:0;
+}
+
+#alertext
+{
+	background:#FFF;
+	font-size:13px;
+}
+
+#dolist
+{
+	background:#069;
+	font-size:15px;
+	color:#FFF;
+	padding:0;
+	height:20px;
+}
+
+#dolistp
+{
+	background:#069;
+	font-size:13px;
+	color:#FFF;	
+	font-weight:bold;
+}
+
+/*
+ * css for TrackTrace menu
+ */
+#info {background:#eee; padding:1em;}
+#submen {right:1em;}
+#info ul {margin:0; padding:0; list-style-type:none; background:transparent; height:3em;}
+#info li {display:block; float:left;}
+.xsnazzy {background:transparent;}
+.xsnazzy span {text-align:center; color:#fff; margin:0; font-weight:normal;}
+
+.xtop {display:block; background:transparent; font-size:1px;}
+.xb1, .xb2, .xb3, .xb4 {
+display:block;
+/* hide overflow:hidden from IE5/Mac */
+/* \*/
+overflow: hidden;
+/* */
+}
+.xb1, .xb2, .xb3 {height:1px;}
+.xb2, .xb3, .xb4 {background:#cccccc; border-left:1px solid #fff; border-right:1px solid #fff;}
+.xb1 {margin:0 5px; background:#fff;}
+.xb2 {margin:0 3px; border-width:0 2px;}
+.xb3 {margin:0 2px;}
+.xb4 {height:2px; margin:0 1px;}
+
+.xboxcontent {display:block; background:#c0c0c0; border:0 solid #fff; border-width:0 1px 1px 1px; border-bottom:1px solid #000;}
+
+
+a.xmenu2, a.xmenu2:visited {display:block; text-decoration:none; width:7em;}
+a.xmenu2:hover {background:transparent; cursor:pointer;}
+a.xmenu2:hover span {color:#000;}
+a.xmenu2:hover .xboxcontent {background:#eee; border-color:#888; border-bottom:1px solid #eee;}
+a.xmenu2:hover .xb1 {background:#888;}
+a.xmenu2:hover .xb2, a.xmenu2:hover .xb3, a.xmenu2:hover .xb4 {background:#fff; border-color:#888;}
+
+/* .xmenu3 is used to show selected tab */
+.xmenu3, a.xmenu3:visited {display:block; text-decoration:none; width:7em;}
+.xmenu3 {background:transparent; cursor:pointer;}
+.xmenu3 span {color:#000;}
+.xmenu3 .xboxcontent {background:#eee; border-color:#888; border-bottom:1px solid #eee;}
+.xmenu3 .xb1 {background:#888;}
+.xmenu3 .xb2, a.xmenu3 .xb3, a.xmenu3 .xb4 {background:#fff; border-color:#888;}
+/*
+ * end of css for TrackTrace menu
+ */
+
+.disabled { background-color:#d1d1d1; }
+
+#TSSBOT
+{
+    background-color:#069;
+    color:#FFF;
+    position:absolute;
+    width:100%;
+    height:18px;
+}
+
+#mask
+{
+    visibility:hidden;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:0;
+}
+
+div.divDrag
+{
+	position: absolute;
+	z-Index: 999;
+	width: 74px;
+	height: 102px;
+}
+
+div.divDrag #tablet
+{
+	background-color: #d0d0d0;
+	color: #000;
+}
+
+/*Tracker:20615-to avoid font issue in request and Offer from Order detail */
+a 
+{
+	text-decoration:none
+}
+
+a:hover 
+{
+	text-decoration:underline 
+}
+#sf    /**section field labels*/
+{
+	font-size: 8pt;
+    color: #000;
+    valign:middle;
+}
+/*font for dashboard section header like Message, Hot Links etc */
+td #dolist
+{
+	font-family: verdana, helvetica, arial;
+}

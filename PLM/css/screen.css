@@ -1,0 +1,40 @@
+/*************************************/
+/*  Copyright  (C)  2002 - 2003      */
+/*           by                      */
+/*  TradeStone Software, Inc.    */
+/*  Gloucester, MA. 01930            */
+/*  All Rights Reserved              */
+/*  Printed in U.S.A.                */
+/*  Confidential, Unpublished        */
+/*  Property of                      */
+/*  TradeStone Software, Inc.    */
+/*************************************/
+
+a.sub 
+{ 
+	color:#000;
+	font-size:15px;
+	font-weight: 700;
+}
+
+tr
+{
+	background:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+td
+{
+	font-size:12px;
+	padding:1px 2px 1px 2px;
+	vertical-align:top;
+}
+
+td.topt,#topt 
+{
+	background:#069;
+	color:#FFF;
+	height:33px;
+	font:bold 17px Arial, Helvetica, sans-serif;
+	vertical-align:middle;
+}
